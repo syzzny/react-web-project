@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+
+h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+span {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+p {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 500;
+    transition: top 0.7s ease-in-out;
+}
+
+.header--hidden {
+    top: -85px;
+}
+
+.header_inner {
+    height: 100%;
+    margin: 0 32px;
+    position: relative;
+}
+
+#logo {
+    width: 120px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    margin: 0;
+}
+
+#logo:hover{
+    cursor: pointer;
+}
+
+#logo img {
+    width: 120px;
+}
+
+.menu-container {
+    position: relative;
+    text-align: center;
+    width: 1500px;
+    margin: 0 auto;
+}
+
+#menu {
+    display: inline-block;
+    padding: 0;
+}
+
+#menu li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#menu li a {
+    padding: 13px 30px;
+    position: relative;
+    font-size: 18px;
+    line-height: 65px;
+    font-weight: 400;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.sub-menu li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.checkart {
+    background-color: #000;
+    border-radius: 100px;
+}
+
+.checkart span {
+    color: #fff;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.sub-menu li a {
+    padding: 13px 16px;
+    position: relative;
+    font-size: 17px;
+}
+
+.main-wrap {
+    height: 100vh;
+    position: relative;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.main-container {
+    background-color: white
+}
+
+.main_slogan {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    top: calc(50% - 25rem);
+}
+
+.main_img {
+    width: 1500px;
+    height: 820px;
+    position: absolute;
+    bottom: 0;
+}
+
+.main_img img {
+    width: 1500px;
+    height: 820px;
+}
+
+
+.main-artwork {
+    padding: 150px 0 190px;
+}
+
+.main-artwrok-wrap {
+    max-width: 1500px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.main-artwork_slogan {
+    margin-bottom: 150px;
+}
+
+.main-artwork-more a {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.main-artwork-more {
+    width: 213px;
+    position: absolute;
+    right: 0;
+    top: 145px;
+}
+
+.main-artwork-more img {
+    width: 80px;
+    margin-left: 10px;
+}
+
+.artwork-list {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 15px;
+}
+
+.swiper-slider img {
+    width: 742px;
+}
+
+.allswiperbutton {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+}
+
+.allswiperbutton:hover {
+    cursor: pointer;
+}
+
+.allswiperbutton img {
+    width: 40px;
+}
+
+.swiper-prev {
+    width: 40px;
+}
+
+.swiper-next {
+    width: 40px;
+}
+
+.swiper-pagination {
+    --swiper-theme-color: #eee;
+    bottom: 15px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+
+.main-program {
+    background-color: #000;
+    padding: 150px 0;
+    color: #fff;
+}
+
+.main-program-wrap {
+    max-width: 1500px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.main-program_slogan {
+    color: #fff;
+    margin-bottom: 80px;
+    text-align: initial;
+}
+
+.border {
+    border-bottom: 0.5px solid #656565;
+}
+
+.main-program-img {
+    width: 1500px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.main-program-img img {
+    width: 1500px;
+}
+.main-program-infor {
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 494px;
+}
+
+.main-program-sub span {
+    display: flex;
+    font-weight: 300;
+}
+
+.main-program-sub span:first-child {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.main-program-title {
+    text-align: initial;
+    font-size: 20px;
+}
+
+.main-program-button img {
+    width: 30px;
+}
+
+
+.main-place {
+    padding: 150px 0;
+}
+
+.main-place-wrap {
+    max-width: 1500px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.main-place_slogan {
+    margin-bottom: 80px;
+}
+
+.main-place-contents {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-contents-img {
+    width: 490px;
+    height: 650px;
+    overflow: hidden;
+}
+
+.main-contents-img img {
+    width: 1000px;
+}
+.main-contents-img img {
+    transition: transform 0.4s ease-in-out;
+}
+
+.main-contents-img img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.main-contents-title {
+    margin-top: 20px;
+    text-align: initial;
+}
+
+.museum {
+    font-size: 20px;
+}
+
+.address {
+    font-size: 18px;
+    color: #A4A4A4;
+}
+
+#footer {
+    width: 100%;
+    padding: 25px 0 120px;
+    position: relative;
+    background-color: #111;
+}
+
+.footer-wrap {
+    max-width: 1500px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.footer-top {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #A4A4A4;
+
+}
+
+#footer-menu {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-menu span {
+    color: #fff;
+    font-weight: 300;
+}
+
+.footer_menu-container {
+    width: 350px;
+}
+
+.footer-logo {
+    width: 120px;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    margin: 0;
+}
+
+.footer-logo img {
+    width: 120px;
+    filter: invert();
+}
+
+.footer-bottom {
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-address {
+    text-align: initial;
+    position: absolute;
+    left: 184px;
+    color: #C0C0C0;
+    font-weight: 300;
+}
+
+.copyright {
+    position: absolute;
+    top: 160px;
+    border-top: 1px dashed #A4A4A4;
+    padding: 15px 0;
+    margin-top: 15px;
+    font-weight: 200;
+}
+
+/*---------------------------------------------------- ArtworkAll css ------------------------------------------------- */
+
+#ArtworkAll_main{
+    padding: 150px 0 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+}
+.filter-name{
+    margin-bottom: 30px;
+}
+.filter-top-list-place li{
+    margin: 10px 0;
+}
+.borderline{
+    border-bottom: 1px solid #ECECEC;
+    margin: 30px 0 30px;
+    width: 250px;
+}
+.art-date-list{
+    display: flex;
+}
+.art-date-list li{
+    margin: 5px 5px 0 0;
+    padding: 5px 10px;
+    border: 1px solid #DFDFDF;
+    font-size: 14px;
+    
+}
+.art-date-list li a{
+    color: #8B8B8B;
+}
+.artlist-wrap img{
+    width: 570px;
+}
+.artlist-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 50px;
+}
+.artlist-img li{
+    position: relative;
+}
+.artfilter{
+    padding: 10px;
+    width: 400px;
+    text-align: initial;
+}
+.article-info{
+    display: flex;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.title{
+    margin-right: 100px;
+    font-weight: 400;
+}
+.date{
+    color: #868E96;
+    font-weight: 400;
+}

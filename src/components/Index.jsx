@@ -57,17 +57,19 @@ export default function Index() {
 
             <header className={header}>
                 <div className='header_inner'>
-                    <a href="/">
-                        <div id='logo'>
-                            <img src="/assets/img/logo2.png" alt="" />
-                        </div>
-                    </a>
+                    <Link to={'/'}>
+                        <a href="/">
+                            <div id='logo'>
+                                <img src={`${process.env.PUBLIC_URL}/assets/img/logo2.png`} alt="" />
+                            </div>
+                        </a>
+                    </Link>
                     <nav className='menu-container'>
                         <ul id='menu'>
                             <li><a href="#main-artwork"><span>전시</span></a></li>
                             <li><a href="#main-program"><span>프로그램</span></a></li>
                             <li><a href="#main-place"><span>공간</span></a></li>
-                            <li><a href=""><span>예약</span></a></li>
+                            <li><Link to="/reservation"><span>예약</span></Link></li>
                         </ul>
                     </nav>
                     <div className='sub-menu'>
@@ -88,7 +90,7 @@ export default function Index() {
                         <h2>Discover the beauty of human creativity at our art museum.</h2>
                     </div>
                     <div className='main_img'>
-                        <img src="/assets/img/mainimg.jpg" alt="" />
+                        <img src={`${process.env.PUBLIC_URL}/assets/img/mainimg.jpg`} alt="" />
                     </div>
                 </div>
 
@@ -101,11 +103,11 @@ export default function Index() {
                             </div>
                             <div className='main-artwork-more'>
                                 <Link to={'/artworkall'}>
-                                    <a href="">
 
-                                        <span>more about art</span>
-                                        <img src="/assets/img/moreicon.png" alt="" />
-                                    </a>
+
+                                    <span>more about art</span>
+                                    <img src={`${process.env.PUBLIC_URL}/assets/img/moreicon.png`} alt="" />
+
                                 </Link>
                             </div>
                             <div className='main-artwork-art'>
@@ -116,24 +118,24 @@ export default function Index() {
                                     navigation={{ prevEl: '.swiper-prev', nextEl: '.swiper-next' }}>
                                     <ul className='artwork-list'>
                                         <SwiperSlide>
-                                            <li className='swiper-slider'><a href=""><img src="/assets/img/artwork01.jpg" alt="" /></a></li>
+                                            <li className='swiper-slider'><a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork01.jpg`} alt="" /></a></li>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <li className='swiper-slider'><a href=""><img src="/assets/img/artwork02.jpg" alt="" /></a></li>
+                                            <li className='swiper-slider'><a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork02.jpg`} alt="" /></a></li>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <li className='swiper-slider'><a href=""><img src="/assets/img/artwork03.jpg" alt="" /></a></li>
+                                            <li className='swiper-slider'><a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork03.jpg`} alt="" /></a></li>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <li className='swiper-slider'><a href=""><img src="/assets/img/artwork04.jpg" alt="" /></a></li>
+                                            <li className='swiper-slider'><a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork04.jpg`} alt="" /></a></li>
                                         </SwiperSlide>
                                     </ul>
                                     <div className='allswiperbutton'>
                                         <div className='swiper-prev'>
-                                            <img src="/assets/img/slideprev.png" alt="" />
+                                            <img src={`${process.env.PUBLIC_URL}/assets/img/slideprev.png`} alt="" />
                                         </div>
                                         <div className='swiper-next'>
-                                            <img src="/assets/img/slidenext.png" alt="" />
+                                            <img src={`${process.env.PUBLIC_URL}/assets/img/slidenext.png`} alt="" />
                                         </div>
                                     </div>
                                 </Swiper>
@@ -161,12 +163,14 @@ export default function Index() {
                                                 <div className='main-program-title'>
                                                     <span>[MAURIZIO CATTELAN] <br />예술적 경험을 확장하는 대학생 교육</span>
                                                 </div>
-                                                <div className='main-program-button'>
-                                                    <img src="/assets/img/programicon.png" alt="" />
-                                                </div>
+                                                <Link to={'/programinfo'}>
+                                                    <div className='main-program-button'>
+                                                        <img src={`${process.env.PUBLIC_URL}/assets/img/programicon.png`} alt="" />
+                                                    </div>
+                                                </Link>
                                             </div>
                                             <div className='main-program-img'>
-                                                <img src="/assets/img/program02.jpg" alt="" />
+                                                <img src={`${process.env.PUBLIC_URL}/assets/img/program02.jpg`} alt="" />
                                             </div>
                                         </li>
                                     </SwiperSlide>
@@ -181,12 +185,14 @@ export default function Index() {
                                                 <div className='main-program-title'>
                                                     <span>[MAURIZIO CATTELAN] <br />예술적 경험을 확장하는 대학생 교육</span>
                                                 </div>
-                                                <div className='main-program-button'>
-                                                    <img src="/assets/img/programicon.png" alt="" />
-                                                </div>
+                                                <Link to={'/programinfo'}>
+                                                    <div className='main-program-button'>
+                                                        <img src={`${process.env.PUBLIC_URL}/assets/img/programicon.png`} alt="" />
+                                                    </div>
+                                                </Link>
                                             </div>
                                             <div className='main-program-img'>
-                                                <img src="/assets/img/program03.jpg" alt="" />
+                                                <img src={`${process.env.PUBLIC_URL}/assets/img/program03.jpg`} alt="" />
                                             </div>
                                         </li>
                                     </SwiperSlide>
@@ -206,7 +212,7 @@ export default function Index() {
                             <ul className='main-place-contents'>
                                 <li className='contents'>
                                     <div className='main-contents-img'>
-                                        <img src="/assets/img/museum01.jpg" alt="" />
+                                        <img src={`${process.env.PUBLIC_URL}/assets/img/museum01.jpg`} alt="" />
                                     </div>
                                     <div className='main-contents-title'>
                                         <p className='museum'>국립현대미술관</p>
@@ -215,7 +221,7 @@ export default function Index() {
                                 </li>
                                 <li className='contents'>
                                     <div className='main-contents-img'>
-                                        <img src="/assets/img/museum02.jpg" alt="" />
+                                        <img src={`${process.env.PUBLIC_URL}/assets/img/museum02.jpg`} alt="" />
                                     </div>
                                     <div className='main-contents-title'>
                                         <p className='museum'>서울시립미술관</p>
@@ -224,7 +230,7 @@ export default function Index() {
                                 </li>
                                 <li className='contents'>
                                     <div className='main-contents-img'>
-                                        <img src="/assets/img/museum03.jpg" alt="" />
+                                        <img src={`${process.env.PUBLIC_URL}/assets/img/museum03.jpg`} alt="" />
                                     </div>
                                     <div className='main-contents-title'>
                                         <p className='museum'>리움 미술관</p>
@@ -251,7 +257,7 @@ export default function Index() {
                     </div>
                     <div className='footer-bottom'>
                         <div className='footer-logo'>
-                            <img src="/assets/img/logo2.png" alt="" />
+                            <img src={`${process.env.PUBLIC_URL}/assets/img/logo2.png`} alt="" />
                         </div>
                         <div className='footer-address'>
                             <p>(우 49300) 부산광역시 사하구 낙동남로 1191 (하단동) 부산현대미술관</p>

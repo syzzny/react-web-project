@@ -47,11 +47,13 @@ export default function ArtworkAll() {
 
             <header className={header}>
                 <div className='header_inner'>
-                    <a href="/">
-                        <div id='logo'>
-                            <img src="/assets/img/logo2.png" alt="" />
-                        </div>
-                    </a>
+                    <Link to={'/'}>
+                        <a href="/">
+                            <div id='logo'>
+                                <img src={`${process.env.PUBLIC_URL}/assets/img/logo2.png`} alt="" />
+                            </div>
+                        </a>
+                    </Link>
                     <nav className='menu-container'>
                         <ul id='menu'>
                             <li><a href="#main-artwork"><span>전시</span></a></li>
@@ -110,7 +112,7 @@ export default function ArtworkAll() {
                         <ul className='artlist-img'>
                             <Link to={'/artworkinfo'}>
                                 <li>
-                                    <a href=""><img src="/assets/img/artwork01.jpg" alt="" /></a>
+                                    <a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork01.jpg`} alt="" /></a>
                                     <div className='article-info'>
                                         <span className='title'>부산모카 시네미디어</span>
                                         <span className='date'>2021.10.08 -</span>
@@ -119,7 +121,7 @@ export default function ArtworkAll() {
                             </Link>
                             <Link to={'/artworkinfo'}>
                                 <li>
-                                    <a href=""><img src="/assets/img/artwork02.jpg" alt="" /></a>
+                                    <a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork02.jpg`} alt="" /></a>
                                     <div className='article-info'>
                                         <span className='title'>부산모카 시네미디어</span>
                                         <span className='date'>2021.10.08 -</span>
@@ -128,7 +130,7 @@ export default function ArtworkAll() {
                             </Link>
                             <Link to={'/artworkinfo'}>
                                 <li>
-                                    <a href=""><img src="/assets/img/artwork03.jpg" alt="" /></a>
+                                    <a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork03.jpg`} alt="" /></a>
                                     <div className='article-info'>
                                         <span className='title'>부산모카 시네미디어</span>
                                         <span className='date'>2021.10.08 -</span>
@@ -137,7 +139,7 @@ export default function ArtworkAll() {
                             </Link>
                             <Link to={'/artworkinfo'}>
                                 <li>
-                                    <a href=""><img src="/assets/img/artwork04.jpg" alt="" /></a>
+                                    <a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork04.jpg`} alt="" /></a>
                                     <div className='article-info'>
                                         <span className='title'>부산모카 시네미디어</span>
                                         <span className='date'>2021.10.08 -</span>

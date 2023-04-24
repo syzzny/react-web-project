@@ -6,16 +6,12 @@ import './css/Index.css'
 import { Link } from 'react-router-dom'
 
 export default function ArtworkInfo() {
-    // useState 훅으로 'prevScrollY'와 'visible' 상태값 초기화
-    // prevScollY : 스크롤 전 위치, visible : 헤어 표시 여부를 나타내는 불리언 값
+
     const [prevScrollY, setPrevScrollY] = useState(0);
     const [visible, setVisible] = useState(true);
 
-    // useEffect 훅을 사용하여 스크롤 이벤트 등록
+
     useEffect(() => {
-        /* handleScroll 함수는 현재 스크롤 위치를 계산하여 'prevScrollY' 값을 업데이트하고,
-            현재 스크롤 방향에 따라 visible 값을 변경*/
-        // 스크롤 방향이 아래쪽이면 visible 값을 false로 설정하여 헤더 숨기기
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
@@ -28,16 +24,13 @@ export default function ArtworkInfo() {
             setPrevScrollY(currentScrollY);
         };
 
-        // 이벤트 리스너 등록
         window.addEventListener("scroll", handleScroll);
 
-        // 이벤트 등록 해제 함수를 반환하여 컴포너트가 언마운트 될때 이벤트 리스너 삭제
         return () => window.removeEventListener("scroll", handleScroll);
     }, [prevScrollY, visible]);
 
-    // 'visible' 값에 따라 클래스 이름을 동적으로 할당하여 헤더의 표시여부 결정
-    // true인 경우 "header" false인 경우 "header header--hidden" 클래스 이름이 할당
     const header = visible ? "header" : "header header--hidden";
+    
     return (
         <div className='wrap'>
             <header className={header}>

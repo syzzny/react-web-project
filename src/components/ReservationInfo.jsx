@@ -1,13 +1,32 @@
 import React, { useState, useEffect } from 'react'
 
 import './css/Index.css'
-import 'react-calendar/dist/Calendar.css';
+
 
 import { Link, NavLink } from 'react-router-dom'
-import Calendar from 'react-calendar'
+
+
+import { format } from 'date-fns';
+import { DayPicker } from 'react-day-picker';
+import 'react-day-picker/dist/style.css';
 
 export default function ReservatonInfo() {
-    const [value, onChange] = useState(new Date());
+    const [selected, setSelected] = React.useState(new Date());
+
+    let footer = <p>Please pick a day.</p>;
+    if (selected) {
+        footer = <p>You picked {format(selected, 'PP')}.</p>;
+    }
+
+    const [counter, setCount] = useState(0);
+    const handleIncrement = () => {
+        setCount(prevCount => prevCount + 1);
+    };
+
+    const handleDecrement = () => {
+        setCount(prevCount => (prevCount > 0 ? prevCount - 1 : 0));
+    };
+
 
     return (
         <div className='wrap'>
@@ -45,29 +64,82 @@ export default function ReservatonInfo() {
             </header>
 
             <main id='ReservationInfo_main'>
-                <div className='reservationInfo-img'>
-                    <div className='reserInfo-ticket'>
-                        <img src={`${process.env.PUBLIC_URL}/assets/img/reser01.jpg`} alt="" />
-                        <div className='title'>
-                            <span>나탈리 카르푸셴코 사진전</span>
-                        </div>
-                        <div className='title-border'></div>
-                        <div className='place'>
-                            <span>장소 - 리움미술관 M2</span>
-                        </div>
-                        <div className='info-border'></div>
-                        <div className='date'>
-                            <span>일시 - 2023.04.13</span>
-                        </div>
-                        <div className='info-border'></div>
-                        <div className='people'>
-                            <span>인원 - 2명</span>
+                <div className='ReservationInfo_wrap'>
+                    <div className='reservationInfo-img'>
+                        <div className='reserInfo-ticket'>
+                            <img src={`${process.env.PUBLIC_URL}/assets/img/reser01.jpg`} alt="" />
+                            <div className='title'>
+                                <span>나탈리 카르푸셴코 사진전</span>
+                            </div>
+                            <div className='title-border'></div>
+                            <div className='place'>
+                                <span>장소 - 리움미술관 M2</span>
+                            </div>
+                            <div className='info-border'></div>
+                            <div className='date'>
+                                <span>일시 - 2023.04.13</span>
+                            </div>
+                            <div className='info-border'></div>
+                            <div className='people'>
+                                <span>인원 - 2명</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className='reservationInfo-choice'>
-                    <div>
-                        <Calendar onChange={onChange} value={value} />
+                    <div className='reservationInfo-choice'>
+                        <div className='reservationInfo-choice-wrap'>
+                            <div className='reservationInfo-choice-left'>
+                                <div className='calendar'>
+                                    <DayPicker
+                                        className='rdp'
+                                        mode="single"
+                                        selected={selected}
+                                        onSelect={setSelected}
+                                        footer={footer}
+                                    />
+                                </div>
+                                <div className='counter'>
+                                    <div className='counter-span'>
+                                        <span>인원</span>
+                                    </div>
+                                    <div className='counter-box'>
+                                        <p>성인/청소년/영유아</p>
+                                        <div className='conter-bg'>
+                                            <div>{counter}</div>
+                                            <div className='counterbtn'>
+                                                <button onClick={handleDecrement}>-</button>
+                                                <button onClick={handleIncrement} >+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='information'>
+                                <div className='information-wrap'>
+                                    <div className='information-span'>
+                                        <span>예매 및 관람 안내</span>
+                                    </div>
+                                    <p>
+                                        안전하고 쾌적한 관람을 위하여 반드시 예매 사항을 지켜주시기
+                                        바라며, 방문이 어려우시면 다른 관람객을 위해 반드시 예매를
+                                        취소해 주시기 바랍니다.
+                                    </p>
+                                    <p>
+                                        선택하신 관람 시간부터 다음 관람 시간 전까지 입장 가능하며, 전시
+                                        관람은 18시까지 가능합니다.
+                                    </p>
+                                    <p>
+                                        마우리치오 카텔란 : WE 전시는 개인에 따라 민감한 내용을 포함할 수 있으며,
+                                        특히 아동 청소년 관람객은 유의할 필요가 있으므로 관람에 참고하여 주시기
+                                        바랍니다.
+                                    </p>
+                                    <p>
+                                        주차장이 협소하여 만차 시 주차가 불가하오니 가급적 대중교통을 이용하여
+                                        주시기 바랍니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </main>

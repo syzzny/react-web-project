@@ -52,10 +52,10 @@ export default function ProgramInfo() {
                     </Link>
                     <nav className='menu-container'>
                         <ul id='menu'>
-                            <li><a href="#main-artwork"><span>전시</span></a></li>
-                            <li><a href="#main-program"><span>프로그램</span></a></li>
-                            <li><a href="#main-place"><span>공간</span></a></li>
-                            <li><a href=""><span>예약</span></a></li>
+                            <li><Link to={'/'}>전시</Link></li>
+                            <li><Link to={'/'}>프로그램</Link></li>
+                            <li><Link to={'/'}>공간</Link></li>
+                            <li><Link to={'/reservation'}>예약</Link></li>
                         </ul>
                     </nav>
                     <div className='sub-menu'>
@@ -97,9 +97,9 @@ export default function ProgramInfo() {
                             <li>강연자: 이정우</li>
                             <li>대상: 160명</li>
                             <li>참가비: 무료</li>
-                            <li>접수: 2023. 4 .12(수) 14:00 부터 리움미술관 홈페이지 선착순 신청 <br/>
-                                *[마감] 멤버십 사전 예약:<br/>
-                                4. 11.(화) 14:00부터 선착순 20명<br/>
+                            <li>접수: 2023. 4 .12(수) 14:00 부터 리움미술관 홈페이지 선착순 신청 <br />
+                                *[마감] 멤버십 사전 예약:<br />
+                                4. 11.(화) 14:00부터 선착순 20명<br />
                                 멤버십 사전 예약 페이지 바로가기</li>
                         </ul>
                     </div>

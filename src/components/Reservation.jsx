@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 
 import './css/Index.css'
 
-import { Link,NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import NavReservation from './NavReservation'
 
 
@@ -21,7 +21,7 @@ export default function Reservation() {
                     </p>
                 </div>
             </div>
-            <NavReservation/>
+            <NavReservation />
 
             <main id='Reservaton_main' className='main-container'>
                 <div className='reservation-list'>
@@ -30,11 +30,11 @@ export default function Reservation() {
                             <div className='reservation-list-wrap'>
                                 <img src={`${process.env.PUBLIC_URL}/assets/img/artwork01.jpg`} alt="" />
                                 <div className='reservation-list-title'>
-                                    <span>전시회 이름</span>
+                                    <span>[기획전] 마우리치오 카텔란</span>
                                 </div>
                                 <div className='reservatonAll'>
                                     <div className='reservation-list-info'>
-                                        <p>20200.00.00 - 2022.02.00</p>
+                                        <p>2023.01.30 - 2023.07.16</p>
                                         <p>장소: M1</p>
                                     </div>
                                     <div className='reservation-list-price'>
@@ -42,9 +42,11 @@ export default function Reservation() {
                                     </div>
                                 </div>
                                 <Link to='/reservationinfo'>
-                                <button className='reservation-list-btn'>
-                                    예매하기
-                                </button>
+                                    <div className='reservation-list-btn-wrap'>
+                                        <button className='reservation-list-btn'>
+                                            예매하기
+                                        </button>
+                                    </div>
                                 </Link>
                             </div>
                         </li>
@@ -52,40 +54,48 @@ export default function Reservation() {
                             <div className='reservation-list-wrap'>
                                 <img src={`${process.env.PUBLIC_URL}/assets/img/artwork02.jpg`} alt="" />
                                 <div className='reservation-list-title'>
-                                    <span>전시회 이름</span>
+                                    <span>[기획전] 조선의 백자, 군자지향</span>
                                 </div>
                                 <div className='reservatonAll'>
                                     <div className='reservation-list-info'>
-                                        <p>20200.00.00 - 2022.02.00</p>
-                                        <p>장소: M1</p>
+                                        <p>2023.02.28 - 2023.05.28</p>
+                                        <p>장소: 아동교육문화센터</p>
                                     </div>
                                     <div className='reservation-list-price'>
                                         <span>무료</span>
                                     </div>
                                 </div>
-                                <button className='reservation-list-btn'>
-                                    예매하기
-                                </button>
+                                <Link to='/reservationinfo'>
+                                    <div className='reservation-list-btn-wrap'>
+                                        <button className='reservation-list-btn'>
+                                            예매하기
+                                        </button>
+                                    </div>
+                                </Link>
                             </div>
                         </li>
                         <li>
                             <div className='reservation-list-wrap'>
                                 <img src={`${process.env.PUBLIC_URL}/assets/img/artwork03.jpg`} alt="" />
                                 <div className='reservation-list-title'>
-                                    <span>전시회 이름</span>
+                                    <span>[기획전] 마우리치오 카텔란</span>
                                 </div>
                                 <div className='reservatonAll'>
                                     <div className='reservation-list-info'>
-                                        <p>20200.00.00 - 2022.02.00</p>
-                                        <p>장소: M1</p>
+                                        <p>2023.01.31 - 2023.07.16</p>
+                                        <p>장소: M2</p>
                                     </div>
                                     <div className='reservation-list-price'>
                                         <span>무료</span>
                                     </div>
                                 </div>
-                                <button className='reservation-list-btn'>
-                                    예매하기
-                                </button>
+                                <Link to='/reservationinfo'>
+                                    <div className='reservation-list-btn-wrap'>
+                                        <button className='reservation-list-btn'>
+                                            예매하기
+                                        </button>
+                                    </div>
+                                </Link>
                             </div>
                         </li>
                     </ul>
@@ -96,7 +106,7 @@ export default function Reservation() {
                     <h3>편의시설 안내</h3>
                     <div className='restwrap'>
                         <ul className='restlist'>
-                        <li>
+                            <li>
                                 <div className='restlist-info'>
                                     <img src={`${process.env.PUBLIC_URL}/assets/img/rest01.jpg`} alt="" />
                                 </div>
@@ -106,7 +116,7 @@ export default function Reservation() {
                                         자세히 보기
                                     </button>
                                 </div>
-                                
+
                             </li>
                             <li>
                                 <div className='restlist-info'>
@@ -118,7 +128,7 @@ export default function Reservation() {
                                         자세히 보기
                                     </button>
                                 </div>
-                                
+
                             </li>
                             <li>
                                 <div className='restlist-info'>
@@ -130,7 +140,7 @@ export default function Reservation() {
                                         자세히 보기
                                     </button>
                                 </div>
-                                
+
                             </li>
                         </ul>
                     </div>

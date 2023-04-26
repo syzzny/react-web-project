@@ -1,5 +1,8 @@
-
 import React, { useState, useEffect } from 'react'
+// import { useParams } from 'react-router-dom';
+
+import DataContext from '../context/DataContext';
+import { useContext } from 'react';
 
 import './css/Index.css'
 
@@ -42,6 +45,12 @@ export default function ArtworkAll() {
     // true인 경우 "header" false인 경우 "header header--hidden" 클래스 이름이 할당
     const header = visible ? "header" : "header header--hidden";
 
+
+    const ArtworkList = () =>{
+        const {state} = useContext(DataContext);
+        const {artlist} = state;
+    }
+
     return (
         <div className='wrap'>
 
@@ -56,10 +65,10 @@ export default function ArtworkAll() {
                     </Link>
                     <nav className='menu-container'>
                         <ul id='menu'>
-                            <li><a href="#main-artwork"><span>전시</span></a></li>
-                            <li><a href="#main-program"><span>프로그램</span></a></li>
-                            <li><a href="#main-place"><span>공간</span></a></li>
-                            <li><a href=""><span>예약</span></a></li>
+                            <li><Link to={'/'}>전시</Link></li>
+                            <li><Link to={'/'}>프로그램</Link></li>
+                            <li><Link to={'/'}>공간</Link></li>
+                            <li><Link to={'/reservation'}>예약</Link></li>
                         </ul>
                     </nav>
                     <div className='sub-menu'>

@@ -10,12 +10,17 @@ import Reservation from './components/Reservation';
 import ReservationList from './components/ReservatonList'
 import ReservationInfo from './components/ReservationInfo';
 
+import ScrollToTop from './components/ScrollToTop';
+import { Dataprovider } from './context/DataContext';
 
 
 
 function App() {
   return (
+    <Dataprovider>
     <div className="App">
+      <ScrollToTop/>
+      
       <Routes>
         <Route path='/' element={<Index/>}></Route>
         <Route path='/artworkall' element={<ArtworkAll/>}></Route>
@@ -26,6 +31,7 @@ function App() {
         <Route path='/reservationinfo' element={<ReservationInfo/>}></Route>
       </Routes>
     </div>
+    </Dataprovider>
   );
 }
 

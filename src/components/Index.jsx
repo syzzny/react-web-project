@@ -118,16 +118,16 @@ export default function Index() {
                                     navigation={{ prevEl: '.swiper-prev', nextEl: '.swiper-next' }}>
                                     <ul className='artwork-list'>
                                         <SwiperSlide>
-                                            <li className='swiper-slider'><a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork01.jpg`} alt="" /></a></li>
+                                            <li className='swiper-slider'><Link to={'/artworkinfo'}><img src={`${process.env.PUBLIC_URL}/assets/img/artwork01.jpg`} alt="" /></Link></li>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <li className='swiper-slider'><a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork02.jpg`} alt="" /></a></li>
+                                            <li className='swiper-slider'><Link to={'/artworkinfo'}><img src={`${process.env.PUBLIC_URL}/assets/img/artwork02.jpg`} alt="" /></Link></li>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <li className='swiper-slider'><a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork03.jpg`} alt="" /></a></li>
+                                            <li className='swiper-slider'><Link to={'/artworkinfo'}><img src={`${process.env.PUBLIC_URL}/assets/img/artwork03.jpg`} alt="" /></Link></li>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <li className='swiper-slider'><a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork04.jpg`} alt="" /></a></li>
+                                            <li className='swiper-slider'><Link to={'/artworkinfo'}><img src={`${process.env.PUBLIC_URL}/assets/img/artwork04.jpg`} alt="" /></Link></li>
                                         </SwiperSlide>
                                     </ul>
                                     <div className='allswiperbutton'>

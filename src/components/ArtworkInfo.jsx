@@ -30,7 +30,7 @@ export default function ArtworkInfo() {
     }, [prevScrollY, visible]);
 
     const header = visible ? "header" : "header header--hidden";
-    
+
     return (
         <div className='wrap'>
             <header className={header}>
@@ -44,10 +44,10 @@ export default function ArtworkInfo() {
                     </Link>
                     <nav className='menu-container'>
                         <ul id='menu'>
-                            <li><a href="#main-artwork"><span>전시</span></a></li>
-                            <li><a href="#main-program"><span>프로그램</span></a></li>
-                            <li><a href="#main-place"><span>공간</span></a></li>
-                            <li><a href=""><span>예약</span></a></li>
+                            <li><Link to={'/'}>전시</Link></li>
+                            <li><Link to={'/'}>프로그램</Link></li>
+                            <li><Link to={'/'}>공간</Link></li>
+                            <li><Link to={'/reservation'}>예약</Link></li>
                         </ul>
                     </nav>
                     <div className='sub-menu'>

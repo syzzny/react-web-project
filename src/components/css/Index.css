@@ -688,7 +688,7 @@ p {
 .reservation-list-info {
     width: 250px;
     text-align: initial;
-    color: #616161;
+    color: #333333;
     font-weight: 300;
     font-size: 17px;
 }
@@ -696,8 +696,9 @@ p {
 .reservation-list-price {
     width: 200px;
     text-align: right;
-    color: #616161;
+    color: #000;
     font-size: 17px;
+    font-weight: 300;
 }
 
 .reservation-list .list {
@@ -710,15 +711,24 @@ p {
     display: flex;
     justify-content: space-evenly;
 }
-
-.reservation-list-btn {
+.reservation-list-btn-wrap{
     width: 450px;
-    height: 45px;
+    text-align: right;
+}
+.reservation-list-btn {
+    width: 140px;
+    height: 41px;
     font-size: 15px;
     margin-top: 25px;
+    background-color: transparent;
+    color: #000;
+    border: 0.5px solid #000; 
+    cursor: pointer;
+}
+.reservation-list-btn:hover{
+    
     background-color: #000;
     color: #fff;
-    cursor: pointer;
 }
 
 .rest {
@@ -812,28 +822,32 @@ p {
     margin-top: 10px;
 }
 
-.title-border {
-    border-bottom: 1px dashed #616161;
-    width: 340px;
+.title_hr {
+    border: 0px;
+    border-top: 1px dashed #333333;
+    margin-top: 12px;
 }
 
 .reserInfo-ticket .place {
     margin-top: 10px;
-    color: #787878;
+    color: #616161;
 }
 
-.info-border {
-    border-bottom: 1px solid #EDEDED;
+.info_hr {
+    border: 0px;
+    border-top: 1px solid #EDEDED;
+    width: 350px;
+    margin-top: 12px;
 }
 
 .reserInfo-ticket .date {
     margin-top: 10px;
-    color: #787878;
+    color: #616161;
 }
 
 .reserInfo-ticket .people {
     margin: 12px 0;
-    color: #787878;
+    color: #616161;
 }
 
 .reservationInfo-choice {
@@ -875,15 +889,13 @@ p {
 
 .reservationInfo-choice-left{
     display: grid;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 1.4fr 1fr;
 }
 .reservationInfo-choice-wrap{
     display: flex;
 }
 
-.counter{
-    margin-top: 8px;
-}
+
 .counter-span{
     width: 302px;
     margin: 0 auto;
@@ -897,14 +909,18 @@ p {
     background-color: #fff;
     margin: 0 auto;
     display: flex;
+    height: 45px;
+    align-items: center;
 }
 .conter-bg{
     display: flex;
     background-color: #E7E7E7;
     width: 131px;
-    height: 30px;
+    height: 36px;
     justify-content: space-around;
     line-height: 28px;
+    align-items: center;
+    font-size: 15px;
 }
 .counter-box p{
     line-height: 28px;
@@ -914,26 +930,151 @@ p {
 .conter-bg button{
     border: none;
     background-color: #E7E7E7;
-    font-size: 18px;
+    font-size: 19px;
     margin-left: 5px;
+    cursor: pointer;
 }
 .information-wrap{
     background-color: #fff;
     margin: 1rem;
-    padding: 25px;
+    padding: 25px 30px;
 }
 .information-span{
     width: 100%;
     text-align: initial;
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .information-wrap{
     text-align: initial;
     word-break: keep-all;
 }
 .information-wrap p{
-    margin: 10px 0;
+    margin: 13px 0;
     color:#656565;
+}
+.hr{
+    border: 0px;
+    border-top: 2px dashed #EDEDED;
+}
+.information-resbtn{
+    width: 660px;
+    text-align: right;
+    margin-top: 100px;    
+}
+.information-resbtn button{
+    width: 200px;
+    height: 45px;
+    font-size: 15px;
+    margin-top: 25px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+/*---------------------------------------------------- ReservationlIST css ------------------------------------------------- */
+
+#ReservationList_main{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 50px 0 20px;
+    display: flex;
+    gap: 30px;
+}
+.reservationlist-span{
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 12px;
+}
+.reservationList-img{
+    padding: 42px 20px;
+}
+.reservationList-img img{
+    width: 500px;
+}
+.reservationlist_wrap{
+    padding: 10px 35px 50px;
+    background-color: #F3F3F3;
+}
+.tabs{
+    display: flex;
+    width: 889px;
+    height: 50px;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+}
+.tabs li{
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+}
+.tabs li:hover{
+    border-bottom: 1px solid #111;
+}
+.tabs li.active{
+    border-bottom: 1px solid #111;
+}
+
+
+
+/*---------------------------------------------------- ReservationlistAll css ------------------------------------------------- */
+.MyReserArt{
+    margin-top: 25px;
+    background-color: #F8F8F8;
+    display: flex;
+    height: 220px;
+    align-items: center;
+    padding: 5px 20px;
+    gap: 35px;
+    text-align: left;
+    border: 1px solid #E5E5E5;
+}
+.MyReserArt-img{
+    height: 184px;
+}
+.MyReserArt-img img{
+    width: 250px;
+    height: 184px;
+}
+.MyReserArt-info{
+    height: 184px;
+}
+.MyReserArt-info .box{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;    
+}
+.box-info{
+    background-color: #000;
+    color: #fff;
+    width: 50px;
+    height: 28px;
+    line-height: 26px;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 2px;
+}
+.box-state{
+    width: 70px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 2px;
+}
+.MyReserArt-info .title{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.MyReserArt-info .date{
+    color: #333333;
+    margin-bottom: 57px;
+}
+.reservation-date{
+    color: #656565;
 }

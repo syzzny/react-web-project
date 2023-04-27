@@ -433,6 +433,13 @@ p {
 .filter-top-list-place li {
     margin: 10px 0;
 }
+.filter-top-list-place li a{
+    color: #AEAEAE;
+}
+.filter-top-list-place li a.selected {
+    color: #000;
+    font-weight: 400;
+}
 
 .borderline {
     border-bottom: 1px solid #ececec;

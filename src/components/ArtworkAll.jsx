@@ -46,10 +46,31 @@ export default function ArtworkAll() {
     const header = visible ? "header" : "header header--hidden";
 
 
-    const ArtworkList = () =>{
-        const {state} = useContext(DataContext);
-        const {artlist} = state;
-    }
+    const { artlist } = useContext(DataContext).state;
+
+
+    const [selected, setSelected] = useState('전체보기');
+
+    // const handleClick = (e) => {
+    //     e.preventDefault();
+    //     const selectedPlace = e.target.textContent;
+    //     setSelected(selectedPlace);
+    // }
+    const [filteredArtlist, setFilteredArtlist] = useState(artlist);
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        const selected = e.target.textContent;
+        setSelected(selected);
+
+        if (selected === "전체보기") {
+            setFilteredArtlist(artlist);
+        } else {
+            const filtered = artlist.filter((artwork) => artwork.place === selected);
+            setFilteredArtlist(filtered);
+        }
+    };
+
 
     return (
         <div className='wrap'>
@@ -91,10 +112,30 @@ export default function ArtworkAll() {
                             </div>
                             <div className='filter-top-list'>
                                 <ul className='filter-top-list-place'>
-                                    <li><a href="">전체보기</a></li>
-                                    <li><a href="">국립 현대미술관</a></li>
-                                    <li><a href="">서울 시립미술관</a></li>
-                                    <li><a href="">리움 미술관</a></li>
+                                    <li>
+                                        <a href=""
+                                            className={selected === '전체보기' ? 'selected' : ''}
+                                            onClick={handleClick}>
+                                            전체보기
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            className={selected === '국립 현대미술관' ? 'selected' : ''}
+                                            onClick={handleClick}>
+                                            국립 현대미술관
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            className={selected === '서울 시립미술관' ? 'selected' : ''}
+                                            onClick={handleClick}>서울 시립미술관</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            className={selected === '리움 미술관' ? 'selected' : ''}
+                                            onClick={handleClick}>리움 미술관</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -119,42 +160,19 @@ export default function ArtworkAll() {
                 <div className='artlist'>
                     <div className='artlist-wrap'>
                         <ul className='artlist-img'>
-                            <Link to={'/artworkinfo'}>
-                                <li>
-                                    <a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork01.jpg`} alt="" /></a>
-                                    <div className='article-info'>
-                                        <span className='title'>부산모카 시네미디어</span>
-                                        <span className='date'>2021.10.08 -</span>
-                                    </div>
-                                </li>
-                            </Link>
-                            <Link to={'/artworkinfo'}>
-                                <li>
-                                    <a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork02.jpg`} alt="" /></a>
-                                    <div className='article-info'>
-                                        <span className='title'>부산모카 시네미디어</span>
-                                        <span className='date'>2021.10.08 -</span>
-                                    </div>
-                                </li>
-                            </Link>
-                            <Link to={'/artworkinfo'}>
-                                <li>
-                                    <a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork03.jpg`} alt="" /></a>
-                                    <div className='article-info'>
-                                        <span className='title'>부산모카 시네미디어</span>
-                                        <span className='date'>2021.10.08 -</span>
-                                    </div>
-                                </li>
-                            </Link>
-                            <Link to={'/artworkinfo'}>
-                                <li>
-                                    <a href=""><img src={`${process.env.PUBLIC_URL}/assets/img/artwork04.jpg`} alt="" /></a>
-                                    <div className='article-info'>
-                                        <span className='title'>부산모카 시네미디어</span>
-                                        <span className='date'>2021.10.08 -</span>
-                                    </div>
-                                </li>
-                            </Link>
+                            {filteredArtlist.map((artwork) => (
+                                <Link to={'/artworkinfo'}>
+                                    <li key={artwork.title}>
+                                        <a href=""><img src={artwork.img} alt="" /></a>
+                                        <div className='article-info'>
+                                            <span className='title'>{artwork.title}</span>
+                                            <span className='date'>
+                                                {artwork.start_date.toLocaleDateString()} - {artwork.finsh_date.toLocaleDateString()}
+                                            </span>
+                                        </div>
+                                    </li>
+                                </Link>
+                            ))}
                         </ul>
                     </div>
                 </div>

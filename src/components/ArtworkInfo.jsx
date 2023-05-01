@@ -1,9 +1,11 @@
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import './css/Index.css'
 
 import { Link } from 'react-router-dom'
+import Modal from 'react-modal';
+import Modalbox from './Modalbox'
 
 export default function ArtworkInfo() {
 
@@ -30,6 +32,8 @@ export default function ArtworkInfo() {
     }, [prevScrollY, visible]);
 
     const header = visible ? "header" : "header header--hidden";
+
+    // ---------모달-------------------------------------------------------------------------
 
     return (
         <div className='wrap'>
@@ -88,10 +92,16 @@ export default function ArtworkInfo() {
                                 </li>
                             </ul>
                         </div>
-                        <div className='heart'>
-                            <button className='heart-button'>관심전시 등록하기
-                                <img className='btnimg' src={`${process.env.PUBLIC_URL}/assets/img/heartbtn.png`} alt="" />
-                            </button>
+                        <div className="heart">
+                        <Modalbox/>
+                            {/* <button className="heart-button" onClick={toggleButtonText}>
+                                {buttonText}
+                                <img
+                                    className="btnimg"
+                                    src={`${process.env.PUBLIC_URL}/assets/img/heartbtn.png`}
+                                    alt=""
+                                />
+                            </button> */}
                         </div>
                     </div>
                 </div>

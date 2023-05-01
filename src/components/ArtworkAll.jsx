@@ -12,16 +12,10 @@ import ScrollAnimate from 'react-scroll-fade-animation';
 
 export default function ArtworkAll() {
 
-    // useState 훅으로 'prevScrollY'와 'visible' 상태값 초기화
-    // prevScollY : 스크롤 전 위치, visible : 헤어 표시 여부를 나타내는 불리언 값
     const [prevScrollY, setPrevScrollY] = useState(0);
     const [visible, setVisible] = useState(true);
 
-    // useEffect 훅을 사용하여 스크롤 이벤트 등록
     useEffect(() => {
-        /* handleScroll 함수는 현재 스크롤 위치를 계산하여 'prevScrollY' 값을 업데이트하고,
-            현재 스크롤 방향에 따라 visible 값을 변경*/
-        // 스크롤 방향이 아래쪽이면 visible 값을 false로 설정하여 헤더 숨기기
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
@@ -30,40 +24,35 @@ export default function ArtworkAll() {
             } else if (prevScrollY > currentScrollY && !visible) {
                 setVisible(true);
             }
-
             setPrevScrollY(currentScrollY);
         };
 
-        // 이벤트 리스너 등록
         window.addEventListener("scroll", handleScroll);
 
-        // 이벤트 등록 해제 함수를 반환하여 컴포너트가 언마운트 될때 이벤트 리스너 삭제
         return () => window.removeEventListener("scroll", handleScroll);
     }, [prevScrollY, visible]);
 
-    // 'visible' 값에 따라 클래스 이름을 동적으로 할당하여 헤더의 표시여부 결정
-    // true인 경우 "header" false인 경우 "header header--hidden" 클래스 이름이 할당
     const header = visible ? "header" : "header header--hidden";
 
 
+    // data context 가져옴
     const { artlist } = useContext(DataContext).state;
 
+    // 날짜 , 장소 확인 state
+    const [selectButton, setSelectButton] = useState('장소');
 
-    const [selected, setSelected] = useState('전체보기');
-
-    // const handleClick = (e) => {
-    //     e.preventDefault();
-    //     const selectedPlace = e.target.textContent;
-    //     setSelected(selectedPlace);
-    // }
+    // ----------------------------------------------------------장소 필터 ----------------------------------------------------------
+    // place 기본설정 '전체보기'로 설정
+    const [selectedPlace, setSelectedPlace] = useState('전체보기');
     const [filteredArtlist, setFilteredArtlist] = useState(artlist);
 
-    const handleClick = (e) => {
+    const handlePlaceClick = (e) => {
         e.preventDefault();
         const selected = e.target.textContent;
-        setSelected(selected);
+        setSelectedPlace(selected);
+        setSelectButton('장소');
 
-        if (selected === "전체보기") {
+        if (selected === '전체보기') {
             setFilteredArtlist(artlist);
         } else {
             const filtered = artlist.filter((artwork) => artwork.place === selected);
@@ -71,7 +60,49 @@ export default function ArtworkAll() {
         }
     };
 
+    // const [noData, setNoData] = useState(false);
+    // const handleClick = (e) =>{
+    //     if ( filtered.length === 0) {
+    //         setNoData(true);
+    //     } else {
+    //         setFilteredArtlistDate(filtered);
+    //         setNoData(false);
+    //     }
+    // }
 
+    // ----------------------------------------------------------날짜 필터 ----------------------------------------------------------
+    const [selectedDate, setSelectedDate] = useState(null);
+    const [filteredArtlistDate, setFilteredArtlistDate] = useState(filteredArtlist);
+
+    const handleDateClick = (e) => {
+        e.preventDefault();
+        const selected = e.target.textContent;
+        setSelectedDate(selected);
+        setSelectButton('날짜');
+
+        if (selected === '전체') {
+            setFilteredArtlistDate(filteredArtlist);
+        } else if (selected === '예정전시') {
+            const today = new Date();
+            const filtered = filteredArtlist.filter((artwork) => {
+                const startDate = new Date(artwork.start_date);
+                return startDate > today;
+            });
+            setFilteredArtlistDate(filtered);
+        } else if (selected === '현재전시') {
+            const today = new Date();
+            const filtered = filteredArtlist.filter((artwork) => {
+                const startDate = new Date(artwork.start_date);
+                const finishDate = new Date(artwork.finish_date);
+                return startDate < today && finishDate > today;
+            });
+            setFilteredArtlistDate(filtered);
+        }
+        console.log(selected);
+    };
+
+
+    // const filteredData = handlePlaceClick(handleDateClick);
     return (
         <div className='wrap'>
 
@@ -114,27 +145,27 @@ export default function ArtworkAll() {
                                 <ul className='filter-top-list-place'>
                                     <li>
                                         <a href=""
-                                            className={selected === '전체보기' ? 'selected' : ''}
-                                            onClick={handleClick}>
+                                            className={selectedPlace === '전체보기' ? 'selected' : ''}
+                                            onClick={handlePlaceClick}>
                                             전체보기
                                         </a>
                                     </li>
                                     <li>
                                         <a href=""
-                                            className={selected === '국립 현대미술관' ? 'selected' : ''}
-                                            onClick={handleClick}>
+                                            className={selectedPlace === '국립 현대미술관' ? 'selected' : ''}
+                                            onClick={handlePlaceClick}>
                                             국립 현대미술관
                                         </a>
                                     </li>
                                     <li>
                                         <a href=""
-                                            className={selected === '서울 시립미술관' ? 'selected' : ''}
-                                            onClick={handleClick}>서울 시립미술관</a>
+                                            className={selectedPlace === '서울 시립미술관' ? 'selected' : ''}
+                                            onClick={handlePlaceClick}>서울 시립미술관</a>
                                     </li>
                                     <li>
                                         <a href=""
-                                            className={selected === '리움 미술관' ? 'selected' : ''}
-                                            onClick={handleClick}>리움 미술관</a>
+                                            className={selectedPlace === '리움 미술관' ? 'selected' : ''}
+                                            onClick={handlePlaceClick}>리움 미술관</a>
                                     </li>
                                 </ul>
                             </div>
@@ -147,9 +178,20 @@ export default function ArtworkAll() {
                             <span>전시기간</span>
                             <div className='art-date'>
                                 <ul className='art-date-list'>
-                                    <li><a href="">전체</a></li>
-                                    <li><a href="">예정전시</a></li>
-                                    <li><a href="">현재전시</a></li>
+                                    <li>
+                                        <a href=""
+                                            className={selectedDate === '전체' ? 'selected' : ''}
+                                            onClick={handleDateClick}>전체
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" className={selectedDate === '예정전시' ? 'selected' : ''}
+                                            onClick={handleDateClick}>예정전시</a>
+                                    </li>
+                                    <li>
+                                        <a href="" className={selectedDate === '현재전시' ? 'selected' : ''}
+                                            onClick={handleDateClick}>현재전시</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -160,19 +202,40 @@ export default function ArtworkAll() {
                 <div className='artlist'>
                     <div className='artlist-wrap'>
                         <ul className='artlist-img'>
-                            {filteredArtlist.map((artwork) => (
+                            {selectButton === '장소' && filteredArtlist.map((artwork) => (
                                 <Link to={'/artworkinfo'}>
                                     <li key={artwork.title}>
                                         <a href=""><img src={artwork.img} alt="" /></a>
                                         <div className='article-info'>
                                             <span className='title'>{artwork.title}</span>
                                             <span className='date'>
-                                                {artwork.start_date.toLocaleDateString()} - {artwork.finsh_date.toLocaleDateString()}
+                                                {artwork.start_date.toLocaleDateString()} - {artwork.finish_date.toLocaleDateString()}
                                             </span>
                                         </div>
                                     </li>
                                 </Link>
-                            ))}
+                            ))
+                            }
+                            {selectButton === '날짜' && filteredArtlistDate.map((artwork) => (
+                                <Link to={'/artworkinfo'}>
+                                    <li key={artwork.title}>
+                                        <a href=""><img src={artwork.img} alt="" /></a>
+                                        <div className='article-info'>
+                                            <span className='title'>{artwork.title}</span>
+                                            <span className='date'>
+                                                {artwork.start_date.toLocaleDateString()} - {artwork.finish_date.toLocaleDateString()}
+                                            </span>
+                                        </div>
+                                    </li>
+                                </Link>
+                            ))
+                            }
+                            {selectButton === '장소' && filteredArtlist.length === 0 && (
+                                <p className='alert_art'>해당 전시가 없습니다.</p>
+                            )}
+                            {selectButton === '날짜' && filteredArtlistDate.length === 0 && (
+                                <p className='alert_art'>해당 전시가 없습니다.</p>
+                            )}
                         </ul>
                     </div>
                 </div>

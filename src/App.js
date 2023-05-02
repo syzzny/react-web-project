@@ -12,6 +12,7 @@ import ReservationInfo from './components/ReservationInfo';
 
 import ScrollToTop from './components/ScrollToTop';
 import { Dataprovider } from './context/DataContext';
+import HeartArtwork from './components/HeartArtwork';
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='/reservation' element={<Reservation/>}></Route>
         <Route path='/reservationlist' element={<ReservationList/>}></Route>
         <Route path='/reservationinfo' element={<ReservationInfo/>}></Route>
+        <Route path='/heartartwork' element={<HeartArtwork/>}></Route>
       </Routes>
     </div>
     </Dataprovider>

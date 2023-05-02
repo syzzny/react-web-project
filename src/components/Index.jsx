@@ -4,6 +4,8 @@ import './css/Index.css'
 
 import { Link } from 'react-router-dom'
 
+import DataContext from '../context/DataContext';
+import { useContext } from 'react';
 
 import ScrollAnimate from 'react-scroll-fade-animation';
 import { Swiper, SwiperSlide } from "swiper/react"; // basic
@@ -52,6 +54,10 @@ export default function Index() {
     const header = visible ? "header" : "header header--hidden";
 
 
+    // data context 가져옴
+    const { artlist } = useContext(DataContext).state;
+    const { programList } = useContext(DataContext).state;
+
     return (
         <div className='wrap'>
 
@@ -74,7 +80,7 @@ export default function Index() {
                     </nav>
                     <div className='sub-menu'>
                         <ul>
-                            <li className='checkart'><a href=""><span>관심전시</span></a></li>
+                            <li className='checkart'><Link to={'/heartartwork'}><span>관심전시</span></Link></li>
                             <li><a href=""><span style={{ fontWeight: "bolder" }}>KOR</span></a></li>
                         </ul>
                     </div>
@@ -95,7 +101,7 @@ export default function Index() {
                 </div>
 
 
-                <ScrollAnimate path={'top'} duration={1200}>
+                <ScrollAnimate path={'top'} duration={1000}>
                     <div className='main-artwork' id='main-artwork'>
                         <div className='main-artwrok-wrap'>
                             <div className='main-artwork_slogan'>
@@ -117,18 +123,17 @@ export default function Index() {
                                     spaceBetween={10} slidesPerView={2} loop={true} pagination={{ clickable: true }}
                                     navigation={{ prevEl: '.swiper-prev', nextEl: '.swiper-next' }}>
                                     <ul className='artwork-list'>
-                                        <SwiperSlide>
-                                            <li className='swiper-slider'><Link to={'/artworkinfo'}><img src={`${process.env.PUBLIC_URL}/assets/img/artwork01.jpg`} alt="" /></Link></li>
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <li className='swiper-slider'><Link to={'/artworkinfo'}><img src={`${process.env.PUBLIC_URL}/assets/img/artwork02.jpg`} alt="" /></Link></li>
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <li className='swiper-slider'><Link to={'/artworkinfo'}><img src={`${process.env.PUBLIC_URL}/assets/img/artwork03.jpg`} alt="" /></Link></li>
-                                        </SwiperSlide>
-                                        <SwiperSlide>
-                                            <li className='swiper-slider'><Link to={'/artworkinfo'}><img src={`${process.env.PUBLIC_URL}/assets/img/artwork04.jpg`} alt="" /></Link></li>
-                                        </SwiperSlide>
+                                        {
+                                            artlist.map((artwork) => (
+                                                <SwiperSlide>
+                                                    <li className='swiper-slider'>
+                                                        <Link to={{ pathname: "/artworkinfo" }} state={artwork}>
+                                                            <img src={artwork.img} alt="" />
+                                                        </Link>
+                                                    </li>
+                                                </SwiperSlide>
+                                            ))
+                                        }
                                     </ul>
                                     <div className='allswiperbutton'>
                                         <div className='swiper-prev'>
@@ -143,7 +148,7 @@ export default function Index() {
                         </div>
                     </div>
                 </ScrollAnimate>
-                <ScrollAnimate path={'top'} duration={1500}>
+                <ScrollAnimate path={'top'} duration={1000}>
                     <div className='main-program' id='main-program'>
                         <div className='main-program-wrap'>
                             <div className='main-program_slogan'>
@@ -152,7 +157,35 @@ export default function Index() {
                             <div className='border'></div>
                             <ul>
                                 <Swiper slidesPerView={1} autoplay={{ delay: 4000 }} loop={true} modules={[Autoplay]}>
-                                    <SwiperSlide>
+
+                                    {
+                                        programList.map((program) => (
+                                            <SwiperSlide>
+                                                <li>
+                                                    <div className='main-program-infor'>
+                                                        <div className='main-program-sub'>
+                                                            <span className='place'>{program.place}</span>
+                                                            <span className='price'>{program.price}</span>
+                                                            <span className='time'>{program.date}</span>
+                                                        </div>
+                                                        <div className='main-program-title'>
+                                                            <span>{program.title} <br />{program.subtitle}</span>
+                                                        </div>
+                                                        <Link to={{ pathname: "/programinfo" }} state={program}>
+                                                            <div className='main-program-button'>
+                                                                <img src={`${process.env.PUBLIC_URL}/assets/img/programicon.png`} alt="" />
+                                                            </div>
+                                                        </Link>
+                                                    </div>
+                                                    <div className='main-program-img'>
+                                                        <img src={program.img} alt="" />
+                                                    </div>
+                                                </li>
+                                            </SwiperSlide>
+                                        ))
+                                    }
+
+                                    {/* <SwiperSlide>
                                         <li>
                                             <div className='main-program-infor'>
                                                 <div className='main-program-sub'>
@@ -195,7 +228,7 @@ export default function Index() {
                                                 <img src={`${process.env.PUBLIC_URL}/assets/img/program03.jpg`} alt="" />
                                             </div>
                                         </li>
-                                    </SwiperSlide>
+                                    </SwiperSlide> */}
                                 </Swiper>
                             </ul>
                             <div className='border'></div>
@@ -203,7 +236,7 @@ export default function Index() {
                     </div>
                 </ScrollAnimate>
 
-                <ScrollAnimate path={'top'} duration={1500}>
+                <ScrollAnimate path={'top'} duration={1000}>
                     <div className='main-place' id='main-place'>
                         <div className='main-place-wrap'>
                             <div className='main-place_slogan'>

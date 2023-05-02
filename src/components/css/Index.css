@@ -433,24 +433,30 @@ p {
 .filter-top-list-place li {
     margin: 10px 0;
 }
-.filter-top-list-place li a{
+
+.filter-top-list-place li a {
     color: #AEAEAE;
 }
+
 .filter-top-list-place li a.selected {
     color: #000;
     font-weight: 400;
 }
-.art-date-list li a{
+
+.art-date-list li a {
     color: #AEAEAE;
 }
-.art-date-list li a.selected{
+
+.art-date-list li a.selected {
     color: #000;
     font-weight: 400;
 }
-.alert_art{
+
+.alert_art {
     font-size: 18px;
     font-weight: 300;
 }
+
 .borderline {
     border-bottom: 1px solid #ececec;
     margin: 30px 0 30px;
@@ -571,6 +577,52 @@ p {
     cursor: pointer;
 }
 
+.heart-button.selected {
+    background-color: #fff;
+    color: #8B8B8B;
+    border: 1px solid #8B8B8B;
+}
+
+.heart-button.selected img{
+    filter: brightness(0.5);
+}
+
+.modal_textwrap {
+    margin: 50px 0 40px 0;
+    text-align: center;
+}
+
+.modal_text {
+    font-size: 20px;
+}
+
+.modal_button {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    
+}
+
+.modal_button button {
+    padding: 0 10px;
+    border-radius: 0;
+    width: 200px;
+    height: 45px;
+    font-size: 15px;
+    border: 1px solid #8B8B8B;
+    background-color: #fff;
+    color: #8B8B8B;
+    cursor: pointer;
+}
+
+.modal_button button:first-child {
+    color: #fff;
+    background-color: #000;
+}
+
+
+
+
 .infotext-list img {
     width: 972px;
 }
@@ -659,32 +711,7 @@ p {
         transform: translateX(-100%);
     }
 }
-.modal_textwrap{
-    margin: 50px 0 40px 0;
-    text-align: center;
-}
-.modal_text{
-    font-size: 20px;
-}
-.modal_button{
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-}
-.modal_button button{
-    padding: 0 10px;
-    border-radius: 0;
-    width: 200px;
-    height: 45px;
-    font-size: 15px;
-    border: 1px solid #8B8B8B;
-    background-color: #fff;
-    color: #8B8B8B;
-}
-.modal_button button:first-child{
-    color: #fff;
-    background-color: #000;
-}
+
 
 
 
@@ -757,10 +784,12 @@ p {
     display: flex;
     justify-content: space-evenly;
 }
-.reservation-list-btn-wrap{
+
+.reservation-list-btn-wrap {
     width: 450px;
     text-align: right;
 }
+
 .reservation-list-btn {
     width: 140px;
     height: 41px;
@@ -768,11 +797,12 @@ p {
     margin-top: 25px;
     background-color: transparent;
     color: #000;
-    border: 0.5px solid #000; 
+    border: 0.5px solid #000;
     cursor: pointer;
 }
-.reservation-list-btn:hover{
-    
+
+.reservation-list-btn:hover {
+
     background-color: #000;
     color: #fff;
 }
@@ -901,11 +931,13 @@ p {
     width: 1008px;
     padding: 30px;
 }
-.rdp{
+
+.rdp {
     background-color: #fff;
     width: 282px;
     padding: 10px;
 }
+
 .rdp {
     --rdp-cell-size: 40px;
     --rdp-caption-font-size: 18px;
@@ -913,43 +945,52 @@ p {
     --rdp-background-color: #e7edff;
     --rdp-accent-color-dark: #ff0bc2 !important;
     --rdp-background-color-dark: #2bff00 !important;
-    --rdp-outline: 2px solid var(--rdp-accent-color); /* Outline border for focused elements */
-    --rdp-outline-selected: 3px solid var(--rdp-accent-color); /* Outline border for focused _and_ selected elements */
+    --rdp-outline: 2px solid var(--rdp-accent-color);
+    /* Outline border for focused elements */
+    --rdp-outline-selected: 3px solid var(--rdp-accent-color);
+    /* Outline border for focused _and_ selected elements */
 }
-.rdp-caption{
+
+.rdp-caption {
     font-family: 'Montserrat', sans-serif;
 }
-.rdp-caption_label{
-    font-weight: 500 !important;
-}
-.rdp-button_reset{
-    font-family: 'Montserrat', sans-serif !important;
-}
-.rdp-head_row{
-    font-size: 20px;
-    font-weight: 400 !important;
-}
-.rdp-head_cell{
+
+.rdp-caption_label {
     font-weight: 500 !important;
 }
 
-.reservationInfo-choice-left{
+.rdp-button_reset {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.rdp-head_row {
+    font-size: 20px;
+    font-weight: 400 !important;
+}
+
+.rdp-head_cell {
+    font-weight: 500 !important;
+}
+
+.reservationInfo-choice-left {
     display: grid;
     grid-template-rows: 1.4fr 1fr;
 }
-.reservationInfo-choice-wrap{
+
+.reservationInfo-choice-wrap {
     display: flex;
 }
 
 
-.counter-span{
+.counter-span {
     width: 302px;
     margin: 0 auto;
     text-align: initial;
     font-size: 18px;
     margin-bottom: 10px;
 }
-.counter-box{
+
+.counter-box {
     width: 282px;
     padding: 10px;
     background-color: #fff;
@@ -958,7 +999,8 @@ p {
     height: 45px;
     align-items: center;
 }
-.conter-bg{
+
+.conter-bg {
     display: flex;
     background-color: #E7E7E7;
     width: 131px;
@@ -968,48 +1010,57 @@ p {
     align-items: center;
     font-size: 15px;
 }
-.counter-box p{
+
+.counter-box p {
     line-height: 28px;
     /* font-weight: 300; */
     margin-right: 20px;
 }
-.conter-bg button{
+
+.conter-bg button {
     border: none;
     background-color: #E7E7E7;
     font-size: 19px;
     margin-left: 5px;
     cursor: pointer;
 }
-.information-wrap{
+
+.information-wrap {
     background-color: #fff;
     margin: 1rem;
     padding: 25px 30px;
 }
-.information-span{
+
+.information-span {
     width: 100%;
     text-align: initial;
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 20px;
 }
-.information-wrap{
+
+.information-wrap {
     text-align: initial;
     word-break: keep-all;
 }
-.information-wrap p{
+
+.information-wrap p {
     margin: 13px 0;
-    color:#656565;
+    color: #656565;
 }
-.hr{
+
+.hr {
     border: 0px;
     border-top: 2px dashed #EDEDED;
 }
-.information-resbtn{
+
+.information-resbtn {
     width: 660px;
     text-align: right;
-    margin-top: 100px;    
+    margin-top: 100px;
 }
-.information-resbtn button{
+
+.information-resbtn button {
     width: 200px;
     height: 45px;
     font-size: 15px;
@@ -1023,52 +1074,60 @@ p {
 
 /*---------------------------------------------------- ReservationlIST css ------------------------------------------------- */
 
-#ReservationList_main{
+#ReservationList_main {
     max-width: 1500px;
     margin: 0 auto;
     padding: 50px 0 20px;
     display: flex;
     gap: 30px;
 }
-.reservationlist-span{
+
+.reservationlist-span {
     width: 100%;
     font-size: 20px;
     text-align: left;
     margin-bottom: 12px;
 }
-.reservationList-img{
+
+.reservationList-img {
     padding: 42px 20px;
 }
-.reservationList-img img{
+
+.reservationList-img img {
     width: 500px;
 }
-.reservationlist_wrap{
+
+.reservationlist_wrap {
     padding: 10px 35px 50px;
     background-color: #F3F3F3;
 }
-.tabs{
+
+.tabs {
     display: flex;
     width: 889px;
     height: 50px;
     align-items: center;
     border-bottom: 1px solid #e6e6e6;
 }
-.tabs li{
+
+.tabs li {
     width: 120px;
     height: 50px;
     line-height: 50px;
 }
-.tabs li:hover{
+
+.tabs li:hover {
     border-bottom: 1px solid #111;
 }
-.tabs li.active{
+
+.tabs li.active {
     border-bottom: 1px solid #111;
 }
 
 
 
 /*---------------------------------------------------- ReservationlistAll css ------------------------------------------------- */
-.MyReserArt{
+.MyReserArt {
     margin-top: 25px;
     background-color: #F8F8F8;
     display: flex;
@@ -1079,22 +1138,27 @@ p {
     text-align: left;
     border: 1px solid #E5E5E5;
 }
-.MyReserArt-img{
+
+.MyReserArt-img {
     height: 184px;
 }
-.MyReserArt-img img{
+
+.MyReserArt-img img {
     width: 250px;
     height: 184px;
 }
-.MyReserArt-info{
+
+.MyReserArt-info {
     height: 184px;
 }
-.MyReserArt-info .box{
+
+.MyReserArt-info .box {
     display: flex;
     gap: 8px;
-    margin-bottom: 15px;    
+    margin-bottom: 15px;
 }
-.box-info{
+
+.box-info {
     background-color: #000;
     color: #fff;
     width: 50px;
@@ -1104,7 +1168,8 @@ p {
     text-align: center;
     border-radius: 2px;
 }
-.box-state{
+
+.box-state {
     width: 70px;
     height: 26px;
     line-height: 26px;
@@ -1113,14 +1178,17 @@ p {
     border: 1px solid #000;
     border-radius: 2px;
 }
-.MyReserArt-info .title{
+
+.MyReserArt-info .title {
     font-size: 20px;
     margin-bottom: 10px;
 }
-.MyReserArt-info .date{
+
+.MyReserArt-info .date {
     color: #333333;
     margin-bottom: 57px;
 }
-.reservation-date{
+
+.reservation-date {
     color: #656565;
 }

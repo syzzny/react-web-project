@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 import ScrollAnimate from 'react-scroll-fade-animation';
 
-export default function ArtworkAll() {
+export default function ArtworkAll(props) {
 
     const [prevScrollY, setPrevScrollY] = useState(0);
     const [visible, setVisible] = useState(true);
@@ -125,7 +125,7 @@ export default function ArtworkAll() {
                     </nav>
                     <div className='sub-menu'>
                         <ul>
-                            <li className='checkart'><a href=""><span>관심전시</span></a></li>
+                            <li className='checkart'><Link to={'/heartartwork'}><span>관심전시</span></Link></li>
                             <li><a href=""><span style={{ fontWeight: "bolder" }}>KOR</span></a></li>
                         </ul>
                     </div>
@@ -203,22 +203,28 @@ export default function ArtworkAll() {
                     <div className='artlist-wrap'>
                         <ul className='artlist-img'>
                             {selectButton === '장소' && filteredArtlist.map((artwork) => (
-                                <Link to={'/artworkinfo'}>
+                                
+                                    
                                     <li key={artwork.title}>
-                                        <a href=""><img src={artwork.img} alt="" /></a>
+                                        <Link to={{pathname: "/artworkinfo"}} state={artwork}>
+                                            <img src={artwork.img} alt="" />
+                                        
                                         <div className='article-info'>
                                             <span className='title'>{artwork.title}</span>
                                             <span className='date'>
                                                 {artwork.start_date.toLocaleDateString()} - {artwork.finish_date.toLocaleDateString()}
                                             </span>
                                         </div>
+                                        </Link>
                                     </li>
-                                </Link>
+                                    
+                                
                             ))
                             }
                             {selectButton === '날짜' && filteredArtlistDate.map((artwork) => (
-                                <Link to={'/artworkinfo'}>
+                                
                                     <li key={artwork.title}>
+                                        <Link to={{pathname: "/artworkinfo"}} state={artwork}>
                                         <a href=""><img src={artwork.img} alt="" /></a>
                                         <div className='article-info'>
                                             <span className='title'>{artwork.title}</span>
@@ -226,8 +232,9 @@ export default function ArtworkAll() {
                                                 {artwork.start_date.toLocaleDateString()} - {artwork.finish_date.toLocaleDateString()}
                                             </span>
                                         </div>
+                                        </Link>
                                     </li>
-                                </Link>
+                        
                             ))
                             }
                             {selectButton === '장소' && filteredArtlist.length === 0 && (
@@ -239,8 +246,6 @@ export default function ArtworkAll() {
                         </ul>
                     </div>
                 </div>
-
-
             </main>
         </div>
     )

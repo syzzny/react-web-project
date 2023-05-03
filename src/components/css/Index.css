@@ -861,6 +861,36 @@ p {
     color: #000;
     font-weight: 500 !important;
 }
+.modal_titlewrap{
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.modal_title{
+    font-size: 20px;
+}
+.modal_img{
+    text-align: center;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.modal_img img{
+    width: 650px;
+    height: 400px;
+}
+.modal_text_info{
+    margin: 20px ; 
+    margin-bottom: 60px;
+}
+.modal_text_info p{
+    width: 650px;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 auto;
+}
+
 
 
 
@@ -1191,4 +1221,56 @@ p {
 
 .reservation-date {
     color: #656565;
+}
+
+
+/*---------------------------------------------------- HeartWork css ------------------------------------------------- */
+#HeartArtwork_main{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 150px 0 20px;
+}
+.heart-title{
+    margin-bottom: 50px;
+}
+.heartartlist-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    margin-bottom: 20px;
+}
+.heartartlist-img img {
+    width: 720px;
+}
+.heart-img{
+    margin-bottom: 10px;
+    height: 397px;
+    overflow: hidden;
+}
+.heartarticle-info {
+    display: flex;
+    font-size: 18px;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 720px;
+    margin: 0 auto;
+}
+.heartarticle-info .title{
+    margin: 0;
+    margin-right: 61px;
+}
+.heartarticle-info .date{
+    margin-right: 30px;
+}
+.heartart-btn{
+    width: 80px;
+    height: 30px;
+    border: 1px solid #8B8B8B;
+    background-color: transparent;
+    color: #333333;
+    cursor: pointer;
+}
+.heartart-btn:hover{
+    background-color: #000;
+    color: #fff;
 }

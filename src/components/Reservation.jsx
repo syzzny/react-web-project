@@ -6,10 +6,40 @@ import './css/Index.css'
 import { Link, NavLink } from 'react-router-dom'
 import NavReservation from './NavReservation'
 
-
+import { ReservPlace01, ReservPlace02, ReservPlace03 } from './Modalbox';
+import { is } from 'date-fns/locale';
 
 
 export default function Reservation() {
+
+    // 모달 -------------------------------------------------------------------------------
+    const [isOpen1, setIsOpen1] = useState(false);
+    const [isOpen2, setIsOpen2] = useState(false);
+    const [isOpen3, setIsOpen3] = useState(false);
+
+    // open modal
+    const openModal1 = () => {
+        setIsOpen1(true);
+    }
+    const openModal2 = () => {
+        setIsOpen2(true);
+    }
+    const openModal3 = () => {
+        setIsOpen3(true);
+    }
+
+    // close modal
+    const closeModal1 = () => {
+        setIsOpen1(false);
+    }
+    const closeModal2 = () => {
+        setIsOpen2(false);
+    }
+    const closeModal3 = () => {
+        setIsOpen3(false);
+    }
+
+
     return (
         <div className='wrap'>
             <div className='animated-title'>
@@ -112,9 +142,10 @@ export default function Reservation() {
                                 </div>
                                 <div className='restlist-span'>
                                     <span>B1 STORE</span>
-                                    <button className='restlist-btn'>
+                                    <button className='restlist-btn' onClick={openModal1}>
                                         자세히 보기
                                     </button>
+                                    <ReservPlace01 isOpen={isOpen1} onClose={closeModal1} />
                                 </div>
 
                             </li>
@@ -123,10 +154,11 @@ export default function Reservation() {
                                     <img src={`${process.env.PUBLIC_URL}/assets/img/rest02.jpg`} alt="" />
                                 </div>
                                 <div className='restlist-span'>
-                                    <span>B1 STORE</span>
-                                    <button className='restlist-btn'>
+                                    <span>B1 CAFE</span>
+                                    <button className='restlist-btn' onClick={openModal2}>
                                         자세히 보기
                                     </button>
+                                    <ReservPlace02 isOpen={isOpen2} onClose={closeModal2} />
                                 </div>
 
                             </li>
@@ -135,10 +167,11 @@ export default function Reservation() {
                                     <img src={`${process.env.PUBLIC_URL}/assets/img/rest03.jpg`} alt="" />
                                 </div>
                                 <div className='restlist-span'>
-                                    <span>B1 STORE</span>
-                                    <button className='restlist-btn'>
+                                    <span>B1 LOCKER</span>
+                                    <button className='restlist-btn' onClick={openModal3}>
                                         자세히 보기
                                     </button>
+                                    <ReservPlace03 isOpen={isOpen3} onClose={closeModal3} />
                                 </div>
 
                             </li>

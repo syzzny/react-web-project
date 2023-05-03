@@ -6,7 +6,7 @@ import { useContext } from 'react';
 
 import './css/Index.css'
 
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function HeartArtwork() {
     const [prevScrollY, setPrevScrollY] = useState(0);
@@ -31,7 +31,23 @@ export default function HeartArtwork() {
 
     const header = visible ? "header" : "header header--hidden";
 
-    
+
+    // 관심 전시 가져오기 
+    const { state, action } = useContext(DataContext);
+    // const handleRemove = (index) => {
+    //     const updatedList = state.likeList.filter((item, idx) => idx !== index);
+    //     // setState(prevState => ({
+    //     //     ...prevState,
+    //     //     likeList: updatedList
+    //     // }));
+
+    //     setState(updatedList);
+    // }
+
+    const handleRemove = (index) => {
+        const updatedList = state.likeList.filter((item, idx) => idx !== index);
+        action.setLikeList(updatedList);
+    };
     return (
         <div className='wrap'>
             <header className={header}>
@@ -61,14 +77,25 @@ export default function HeartArtwork() {
             </header>
 
             <main id='HeartArtwork_main' className='main-container'>
-                <div className='heartart'>
-                    <ul className='heartartlist'>
-                        <li>
-                            <div>
-                                <img src="" alt="" />
-
-                            </div>
-                        </li>
+                <div className='heartartlist-wrap'>
+                    <h2 className='heart-title'>Exhibition of my interest 💣💥</h2>
+                    <ul className='heartartlist-img'>
+                        {
+                            state.likeList.map((favorites, index) => (
+                                <li key={index}>
+                                    <div className='heart-img'>
+                                        <img src={favorites.img} />
+                                    </div>
+                                    <div className='heartarticle-info'>
+                                        <span className='title'>{favorites.title}</span>
+                                        <span className='date'>
+                                            {favorites.start_date.toLocaleDateString()} - {favorites.finish_date.toLocaleDateString()}
+                                        </span>
+                                        <button className='heartart-btn' onClick={() => handleRemove(index)} >삭제</button>
+                                    </div>
+                                </li>
+                            ))
+                        }
                     </ul>
                 </div>
             </main>

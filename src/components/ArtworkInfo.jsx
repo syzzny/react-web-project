@@ -1,10 +1,12 @@
 
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 
 import './css/Index.css'
 
 import { Link, useLocation } from 'react-router-dom'
 import { EnterModal, DeleteModal } from './Modalbox';
+import DataContext from '../context/DataContext';
+import { click } from '@testing-library/user-event/dist/click';
 
 export default function ArtworkInfo(props) {
 
@@ -35,26 +37,60 @@ export default function ArtworkInfo(props) {
     // ---------모달-------------------------------------------------------------------------
     const [isOpen, setIsOpen] = useState(false);
     const [clickBtn, SetClickBtn] = useState(false);
+    const { state,action } = useContext(DataContext);
 
     // open modal
     // const openModal = () =>{
     //     setIsOpen(true);
     // }
-    
+
     // close modal
-    const closeModal = () =>{
+    const closeModal = () => {
         setIsOpen(false);
-    }
+    };
 
     const toggleBtn = () => {
         setIsOpen(true);
         SetClickBtn(prev => !prev);
-    }
+        
+        if(clickBtn){
+            handleRemove(artwork.title);
+        }
+        else{
+            action.setLikeList(prevList => prevList.concat([artwork]));
 
-     // data context 가져옴
+        }
+        // const { likeList } = state;
+        // const isAlreadyAdded = likeList.some(favorite => favorite.id === artwork.id);
+        // if (!isAlreadyAdded) {
+        //     action.setLikeList(prevList => prevList.concat([artwork]));
+        // } else {
+        
+        // }
+    }
+    // useEffect(() => {
+    //     const storedLikeList = JSON.parse(localStorage.getItem('likeList'));
+    //     if (storedLikeList && storedLikeList.length > 0) {
+    //         action.setLikeList(storedLikeList);
+    //     }
+    // }, [action]);
+
+    // data context 가져옴
     const locaton = useLocation();
     const artwork = locaton.state;
     console.log(locaton);
+
+    const handleRemove = (title) => {
+        const updatedList = state.likeList.filter((item) => item.title !== title);
+        action.setLikeList(updatedList);
+    };
+
+    // 관심전시 등록 확인
+    // 관심전시로 등록한 리스트에서 검색, (값이 있어서 TRUE로 남아있고 SetClickBtn 실행이 됨)
+    useEffect (()=>{
+        SetClickBtn(Boolean(state.likeList.find((item)=>(item.title === artwork.title))));
+        console.log(state.likeList.find((item)=>(item.title === artwork.title)))
+    },[])
 
     return (
         <div className='wrap'>
@@ -109,12 +145,13 @@ export default function ArtworkInfo(props) {
                             </ul>
                         </div>
                         <div className="heart">
-                            <button className={`heart-button ${clickBtn ? 'selected' : ''}`} onClick={toggleBtn}>
+                            <button className={`heart-button ${clickBtn ? 'selected' : ''}`}
+                                onClick={toggleBtn}>
                                 {clickBtn ? '관심전시 취소하기' : '관심전시 등록하기'}
                                 <img className={`btnimg ${clickBtn ? 'butning-color' : ''}`} src={`${process.env.PUBLIC_URL}/assets/img/heartbtn.png`} alt="" />
                             </button>
-                            {clickBtn && <EnterModal isOpen={isOpen} onClose={closeModal}/>}
-                            {clickBtn || <DeleteModal isOpen={isOpen} onClose={closeModal}/>}
+                            {clickBtn && <EnterModal isOpen={isOpen} onClose={closeModal} />}
+                            {clickBtn || <DeleteModal isOpen={isOpen} onClose={closeModal} />}
                         </div>
                     </div>
                 </div>

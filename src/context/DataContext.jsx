@@ -8,7 +8,7 @@ const Dataprovider = ({children})=>{
     const [artlist, setArtlist] = useState(
         [
             {
-                title: "[기획전] 마우리치오 카텔란",
+                title: "젊은 모색 2023: 미술관을 위한 주석",
                 start_date: new Date(2023, 0, 30),
                 finish_date: new Date(2023, 6, 16),
                 place: "국립 현대미술관",
@@ -17,7 +17,7 @@ const Dataprovider = ({children})=>{
                 info2: "전소정은 영상, 사운드, 조각, 출판 등 다양한 매체 실험을 통해 역사와 현재에 관한 새로운 인식을 환기시키는 비선형적인 시공간을 창조해 왔습니다. 물리적 경계의 전환이 일상의 감각적 경험을 관통하는 방식에 관심을 가지며 작가는 동시대의 속도감 속에서 배제된 인물의 목소리, 풍경, 시간을 탐구하는 여정을 이어가고 있습니다.소정의 프로젝트 그린스크린은 리움 로비 공간에 놓인 미디어월을 매체이자 장치로 고려하며, 경계에 관한 감각을 다루는 세편의 작품 그린 스크린(2021), 이클립스(2020), 먼저 온 미래(2015)를 소개합니다. 그린 스크린이 소개되는 미디어월을 전시 공간에서 벗어난, 미술관의 여러 공간들을 연결하는 통로이자 임시적 모임의 아케이드 입니다."
             },
             {
-                title: "[기획전] 조선의 백자, 군자지향 ",
+                title: "서스펜스의 도시, 워치 앤 칠3.0",
                 start_date: new Date(2023, 1, 28),
                 finish_date: new Date(2023, 3, 15),
                 place: "서울 시립미술관",
@@ -28,7 +28,7 @@ const Dataprovider = ({children})=>{
 
             },
             {
-                title: "[기획전] 마우리치오 카텔란 ",
+                title: "보이는 수장고: 이건희 컬렉션",
                 start_date: new Date(2023, 2, 30),
                 finish_date: new Date(2023, 7, 20),
                 place: "리움 미술관",
@@ -39,7 +39,7 @@ const Dataprovider = ({children})=>{
 
             },
             {
-                title: "[기획전] 조선의 백자, 군자지향",
+                title: "페터 바이벨: 인지 행위로서의 예술",
                 start_date: new Date(2023, 8, 5),
                 finish_date: new Date(2023, 9, 6),
                 place: "국립 현대미술관",
@@ -82,10 +82,11 @@ const Dataprovider = ({children})=>{
     )
 
     const [likeList, setLikeList] = useState([]);
+    const [reservList, setReservList] = useState([]);
 
     const value = {
-        state : {artlist, programList,likeList},
-        action : {setArtlist, setProgramList,setLikeList}
+        state : {artlist, programList,likeList, reservList},
+        action : {setArtlist, setProgramList,setLikeList, setReservList}
     }
 
     return <DataContext.Provider value={value}>

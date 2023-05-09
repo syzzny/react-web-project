@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { format } from 'date-fns';
+
 
 import './css/Index.css'
 import NavReservation from './NavReservation'
@@ -12,6 +14,13 @@ export default function ReservatonList() {
     const handleTabClick = (tab) => {
         setActiveTab(tab);
     }
+
+
+    // 예약정보 가져오기
+    const handleReserve = (selectedDate, count) => {
+        const formattedDate = format(selectedDate, 'yyyy-MM-dd');
+        console.log(`Reserved ${count} items on ${formattedDate}`);
+    };
 
     return (
         <div className='reservation_wrap'>
@@ -49,10 +58,10 @@ export default function ReservatonList() {
                         </ul>
                         <div className='tab-content'>
                             {activeTab === 'all' && (
-                                <ReservationListAll />
+                                <ReservationListAll handleReserve={handleReserve}/>
                             )}
                             {activeTab === 'reservation' && (
-                                <ReservationListRes />
+                                <ReservationListRes handleReserve={handleReserve}/>
                             )}
                             {activeTab === 'cancel' && (
                                 <ReservationListDelete />

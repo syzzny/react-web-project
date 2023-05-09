@@ -225,11 +225,32 @@ export function ReservPlace03(props) {
 }
 
 
+// Reservationinfo-------------------------------------------------------------------------------------------------------------
 
-
-
-
-
+export function Reserinfo(props) {
+    const customStyles = {
+        content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            width: '400px',
+            height: '178px'
+        },
+    };
+    return (
+        <Modal isOpen={props.isOpen} onRequestClose={props.onClose} style={customStyles}>
+        <div className='modal_textwrap'>
+            <p className='modal_text'>예약이 완료되었습니다.</p>
+        </div>
+        <div className='modal_button'>
+            <button onClick={props.onClose}>확인</button>
+        </div>
+    </Modal>
+    )
+}
 
 
 

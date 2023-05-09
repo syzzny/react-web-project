@@ -14,9 +14,15 @@ import ScrollToTop from './components/ScrollToTop';
 import { Dataprovider } from './context/DataContext';
 import HeartArtwork from './components/HeartArtwork';
 
+import { format } from 'date-fns';
 
 
 function App() {
+  const handleReserve = (selected, counter) => {
+    console.log(`Selected: ${format(selected, 'PP')}, Counter: ${counter}`);
+    // 예약 처리 로직 추가
+  };
+
   return (
     <Dataprovider>
     <div className="App">
@@ -29,7 +35,7 @@ function App() {
         <Route path='/programinfo' element={<ProgramInfo/>}></Route>
         <Route path='/reservation' element={<Reservation/>}></Route>
         <Route path='/reservationlist' element={<ReservationList/>}></Route>
-        <Route path='/reservationinfo' element={<ReservationInfo/>}></Route>
+        <Route path='/reservationinfo' element={<ReservationInfo onReserve={handleReserve}/>}></Route>
         <Route path='/heartartwork' element={<HeartArtwork/>}></Route>
       </Routes>
     </div>

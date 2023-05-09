@@ -1,24 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 
 import './css/Index.css'
 
-
-import { Link, NavLink } from 'react-router-dom'
+import DataContext from '../context/DataContext';
+import { Link, NavLink, useLocation} from 'react-router-dom'
 
 
 import { format } from 'date-fns';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
+import { Reserinfo } from './Modalbox';
+
 
 export default function ReservatonInfo() {
     const [selected, setSelected] = React.useState(new Date());
 
     let footer;
-    // let footer = <p>Please pick a day.</p>;
-    // if (selected) {
-    //     footer = <p>You picked {format(selected, 'PP')}.</p>;
-    // }
-
     const [counter, setCount] = useState(0);
     const handleIncrement = () => {
         setCount(prevCount => prevCount + 1);
@@ -29,6 +26,35 @@ export default function ReservatonInfo() {
     };
 
 
+    // 모달 -------------------------------------------------------------------------------
+    const [isOpen, setIsOpen] = useState(false);
+
+    // open modal
+    // const openModal = () =>{
+    //     setIsOpen(true);
+    // }
+
+    // close modal
+    const closeModal = () =>{
+        setIsOpen(false);
+    }
+
+    // 예약 정보 내보내기    
+    // const handleReserve = () => {
+    //     onReserve(selected, counter);
+    //     setIsOpen(true);
+    // };
+
+    const { state,action } = useContext(DataContext);
+
+    const clickBtn = () =>{
+        setIsOpen(true);
+        action.setReservList(prevList => prevList.concat({...artwork, date:format(selected, 'PP'), counter:counter }));
+        console.log(state.reservList);
+    }
+
+    const locaton = useLocation();
+    const artwork = locaton.state;
     return (
         <div className='wrap'>
             <div className='animated-title'>
@@ -68,13 +94,13 @@ export default function ReservatonInfo() {
                 <div className='ReservationInfo_wrap'>
                     <div className='reservationInfo-img'>
                         <div className='reserInfo-ticket'>
-                            <img src={`${process.env.PUBLIC_URL}/assets/img/reser01.jpg`} alt="" />
+                            <img src={artwork.img} alt="" />
                             <div className='title'>
-                                <span>나탈리 카르푸셴코 사진전</span>
+                                <span>{artwork.title}</span>
                             </div>
                             <hr className='title_hr'/>
                             <div className='place'>
-                                <span>장소 - 리움미술관 M2</span>
+                                <span>장소 - {artwork.place}</span>
                             </div>
                             <hr className='info_hr'/>
                             <div className='date'>
@@ -148,9 +174,10 @@ export default function ReservatonInfo() {
                                     </p>
                                 </div>
                                 <div className='information-resbtn'>
-                                    <button>
+                                    <button onClick={clickBtn}>
                                         예약하기
                                     </button>
+                                    <Reserinfo isOpen={isOpen} onClose={closeModal}/>
                                 </div>
                             </div>
                         </div>

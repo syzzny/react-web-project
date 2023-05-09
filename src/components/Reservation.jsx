@@ -9,6 +9,9 @@ import NavReservation from './NavReservation'
 import { ReservPlace01, ReservPlace02, ReservPlace03 } from './Modalbox';
 import { is } from 'date-fns/locale';
 
+import DataContext from '../context/DataContext';
+import { useContext } from 'react';
+
 
 export default function Reservation() {
 
@@ -39,7 +42,10 @@ export default function Reservation() {
         setIsOpen3(false);
     }
 
+    const { artlist } = useContext(DataContext).state;
 
+
+    
     return (
         <div className='wrap'>
             <div className='animated-title'>
@@ -56,22 +62,24 @@ export default function Reservation() {
             <main id='Reservaton_main' className='main-container'>
                 <div className='reservation-list'>
                     <ul className='list'>
-                        <li>
+                        {
+                            artlist.map((artwork)=>(
+                                <li>
                             <div className='reservation-list-wrap'>
-                                <img src={`${process.env.PUBLIC_URL}/assets/img/artwork01.jpg`} alt="" />
+                                <img src={artwork.img} alt="" />
                                 <div className='reservation-list-title'>
-                                    <span>[기획전] 마우리치오 카텔란</span>
+                                    <span>{artwork.title}</span>
                                 </div>
                                 <div className='reservatonAll'>
                                     <div className='reservation-list-info'>
-                                        <p>2023.01.30 - 2023.07.16</p>
-                                        <p>장소: M1</p>
+                                        <p>{artwork.start_date.toLocaleDateString()} - {artwork.finish_date.toLocaleDateString()}</p>
+                                        <p>{artwork.place}</p>
                                     </div>
                                     <div className='reservation-list-price'>
                                         <span>무료</span>
                                     </div>
                                 </div>
-                                <Link to='/reservationinfo'>
+                                <Link to={{pathname: "/reservationinfo"}} state={artwork}>
                                     <div className='reservation-list-btn-wrap'>
                                         <button className='reservation-list-btn'>
                                             예매하기
@@ -80,54 +88,8 @@ export default function Reservation() {
                                 </Link>
                             </div>
                         </li>
-                        <li>
-                            <div className='reservation-list-wrap'>
-                                <img src={`${process.env.PUBLIC_URL}/assets/img/artwork02.jpg`} alt="" />
-                                <div className='reservation-list-title'>
-                                    <span>[기획전] 조선의 백자, 군자지향</span>
-                                </div>
-                                <div className='reservatonAll'>
-                                    <div className='reservation-list-info'>
-                                        <p>2023.02.28 - 2023.05.28</p>
-                                        <p>장소: 아동교육문화센터</p>
-                                    </div>
-                                    <div className='reservation-list-price'>
-                                        <span>무료</span>
-                                    </div>
-                                </div>
-                                <Link to='/reservationinfo'>
-                                    <div className='reservation-list-btn-wrap'>
-                                        <button className='reservation-list-btn'>
-                                            예매하기
-                                        </button>
-                                    </div>
-                                </Link>
-                            </div>
-                        </li>
-                        <li>
-                            <div className='reservation-list-wrap'>
-                                <img src={`${process.env.PUBLIC_URL}/assets/img/artwork03.jpg`} alt="" />
-                                <div className='reservation-list-title'>
-                                    <span>[기획전] 마우리치오 카텔란</span>
-                                </div>
-                                <div className='reservatonAll'>
-                                    <div className='reservation-list-info'>
-                                        <p>2023.01.31 - 2023.07.16</p>
-                                        <p>장소: M2</p>
-                                    </div>
-                                    <div className='reservation-list-price'>
-                                        <span>무료</span>
-                                    </div>
-                                </div>
-                                <Link to='/reservationinfo'>
-                                    <div className='reservation-list-btn-wrap'>
-                                        <button className='reservation-list-btn'>
-                                            예매하기
-                                        </button>
-                                    </div>
-                                </Link>
-                            </div>
-                        </li>
+                            ))
+                        }
                     </ul>
                 </div>
 

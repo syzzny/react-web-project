@@ -11,6 +11,7 @@ export default function ReservationListAll(props) {
 
         <div className='wrap'>
             <div>
+                {reservList.length === 0 && <p>예매 내역이 없습니다.</p>}
                     {
                         state.reservList.map((reserva, index) => (
                             <div key={index}  className='MyReserArt'>

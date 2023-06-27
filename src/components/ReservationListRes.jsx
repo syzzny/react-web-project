@@ -6,9 +6,11 @@ import { useContext } from 'react';
 export default function ReservationListRes() {
 
     const { state } = useContext(DataContext);
+    const { reservList } = state;
     return (
         <div className='wrap'>
         <div>
+            {reservList.length === 0 && <p>예매 내역이 없습니다.</p>}
                 {
                     state.reservList.map((reserva, index) => (
                         <div key={index}  className='MyReserArt'>

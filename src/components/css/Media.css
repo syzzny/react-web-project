@@ -1,0 +1,524 @@
+@media (max-width: 768px) {
+    h2{
+        font-size: 22px;
+    }
+    .header {
+        max-width: 768px;
+    }
+    .menu-container{
+        width: 385px;
+    }
+    #menu li a{
+        padding: 13px 20px;
+    }
+    #logo img{
+        width: 100px;
+    }
+    .sub-menu{
+        position: absolute;
+        top: 16px;
+        right: -2px;
+    }
+    .main-wrap{
+        height: 100%;
+        position: unset;
+        max-width: 768px;
+    }
+    .main_slogan{
+        /* top: calc(50% - 23rem); */
+        margin-top: 130px;
+        position: unset;
+    }
+    .main_img{
+        width: 100%;
+        height: auto;
+        position: unset;
+        margin-top: 20px;
+    }
+    .main_img img{
+        width: 768px;
+        height: auto;
+    }
+    .main-artwrok-wrap{
+        max-width: 768px;
+        padding: 0 10px;
+    }
+    .main-artwork-more{
+        top: 90px;
+        right: 10px;
+        width: 176px;
+    }
+    .main-artwork-more a{
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .main-artwork-more img{
+        width: 60px;
+    }
+    .main-artwork_slogan{
+        margin-bottom: 100px;
+    }
+    .swiper-slider img{
+        width: 367px;
+    }
+    .main-program{
+        padding: 70px 0;
+    }
+    .main-program_slogan{
+        margin-bottom: 61px;
+    }
+    .main-program-wrap{
+        max-width: 768px;
+        padding: 0 10px;
+    }
+    .main-program-infor{
+        gap: 118px;
+    }
+    .main-program-infor{
+        margin-top: 50px;
+    }
+    .main-program-sub span:first-child{
+        margin-bottom: 15px;
+    }
+    .main-program-title{
+        font-size: 17px;
+    }
+    .main-program-img{
+        width: 748px;
+        margin-bottom: 70px;
+    }
+    .main-place-wrap{
+        max-width: 768px;
+        padding: 0 10px;
+    }
+    .main-place-contents{
+        gap: 10px;
+    }
+    .main-contents-img{
+        width: 100%;
+        height: 162px;
+    }
+    .main-contents-img img{
+        width: 100%;
+    }
+    .main-contents-title{
+        margin-top: 13px;
+    }
+    .museum{
+        font-size: 15px;
+    }
+    .address{
+        font-size: 15px;
+        color: #000;
+        font-weight: 300;
+    }
+    .footer-wrap{
+        max-width: 768px;
+        padding: 0 10px;
+    }
+    #footer{
+        padding: 25px 0 105px;
+    }
+    #footer-menu span{
+        font-size: 14px;
+    }
+    .footer_menu-container{
+        width: 290px;
+    }
+    .footer-logo img{
+        width: 100px;
+    }
+    .footer-address{
+        font-size: 14px;
+    }
+    .footer-bottom{
+        padding: 30px 0;
+    }
+    .footer-logo{
+        top: 76px;
+    }
+    .copyright{
+        top: 154px;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    /* artworkall-------------------------------------------------------------- */
+    #ArtworkAll_main{
+        max-width: 768px;
+        display: grid;
+        padding: 150px 10px 20px
+    }
+    .artfilter{
+        width: 728px;
+    }
+    .artfilter-wrap{
+        /* display: flex;
+        justify-content: space-between; */
+    }
+    .borderline{
+        display: none;
+    }
+    .filter-name{
+        margin-bottom: 8px;
+    }
+    .filter-name h3{
+        font-size: 22px;
+    }
+    .filter-top{
+        margin-bottom: 15px;
+    }
+    .filter-top-list-place{
+        display: flex;
+        gap: 16px;
+        margin: 0;
+        font-size: 15px;
+    }
+    .artlist-wrap img{
+        width: 368px;
+    }
+    .artist-img{
+        column-gap: 10px;
+        row-gap: 30px;
+    }
+    .article-info{
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    .title{
+        margin: 0;
+        text-align: left;
+    }
+    .date{
+        color: #000;
+        font-weight: 300;
+    }
+    .art-date-list{
+        font-size: 13px;
+    }
+    
+    /* artworkinfo---------------------------------------------------------- */
+    #ArtworkInfo_main{
+        max-width: 768px;
+        padding: 110px 10px 20px
+    }
+    .artmainimg {
+        height: auto;
+    }
+    .artmainimg img{
+        width: 746px;
+    }
+    .artworkinfo{
+        padding: 35px 0;
+    }
+    .artworkinfo-wrap{
+        max-width: 746px;
+        display: grid;
+    }
+    .infotext-list li{
+        display: grid;
+        grid-template-rows: 0.5fr 2.5fr;
+        grid-template-columns:auto
+    }
+    .infotext-list{
+        margin-top: 0;
+    }
+    .infotext-list span{
+        font-size: 18px;
+    }
+    .infotext-list li p{
+        width: 746px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .infotext-list li{
+        margin-bottom: 50px;
+    }
+    .infotext-list img{
+        width: 746px;
+    }
+    .infotext{
+        width: 746px;
+    }
+    .heart-button{
+        margin: 0;
+        width: 746px;
+        height: 52px;
+        padding: 0;
+        display: block;
+        text-align: center;
+    }
+    .heart-button img{
+        display: none;
+    }
+    .infotext-list:last-child{
+        margin-bottom: 0;
+    }
+    .infotext-list li:last-child{
+        margin-bottom: 0;
+    }
+
+    /* heartartwork ------------------------------------------------------------- */
+    #HeartArtwork_main{
+        max-width: 768px;
+        padding: 110px 10px 20px
+    }
+    .heart-img{
+        height: auto;
+    }
+    .heartartlist-img img{
+        width: 368px;
+    }
+    .heartarticle-info{
+        width: 368px;
+        gap: 5px;
+    }
+    .heartarticle-info .title{
+        font-size: 14px;
+        margin: 0;
+    }
+    .heartarticle-info .date{
+        font-size: 12px;
+        margin: 0;
+        text-align: left;
+    }
+    .heartart-btn{
+        width: 55px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    /* programinfo ----------------------------------------------------------------------- */
+    .programinfo-wrap{
+        max-width: 768px;
+        padding: 110px 10px 70px;
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+    .infoimg img{
+        width: 747px;
+    }
+    .programinfo-title{
+        width: 630px;
+    }
+    .programinfo-title h3{
+        font-size: 18px;
+    }
+    .programinfo-text{
+        padding: 10px 0;
+    }
+    .programinfo-text-span{
+        font-size: 17px;
+    }
+    .programinfo-text p{
+        font-size: 16px;
+    }
+    .programinfo-list{
+        font-size: 16px;
+    }
+    .program-btn{
+        width: 746px;
+        padding: 0;
+        text-align: center;
+        display: block;
+    }
+    .program-btn img{
+        display: none;
+    }
+
+    /* reservation -------------------------------------------------------------------- */
+    .animated-title{
+        font-size: 14px;
+        height: 46px;
+    }
+    .animated-title .track{
+        line-height: 46px;
+    }
+    #Reservaton_main{
+        max-width: 768px;
+        padding: 50px 10px 20px;
+    }
+    .reservation-list-wrap img{
+        width: 348px;
+    }
+    .reservation-list-title, .reservatonAll{
+        width: 348px;
+        font-size: 15px;
+    }
+    .reservation-list-btn-wrap{
+        width: 348px;
+        font-size: 15px;
+    }
+    .reservation-list-info, .reservation-list-price{
+        font-size: 15px;
+    }
+    .reservation-list .list{
+        gap: 12px;
+    }
+    .reservation-list-btn{
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 20px;
+    }
+    .rest h3{
+        font-size: 22px;
+    }
+    .restlist{
+        gap: 10px;
+    }
+    .restlist-info{
+        width: 241px;
+        height: auto;
+    }
+    .restlist-info img{
+        width: 241px;
+    }
+    .restlist-span{
+        width: 241px;
+        padding: 8px 0;
+    }
+    .restlist-span span{
+        font-size: 15px;
+        line-height: 30px;
+    }
+    .restlist-btn{
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+    /* reservationinfo -------------------------------------------------- */
+    #ReservationInfo_main{
+        max-width: 768px;
+        padding: 50px 10px 20px;
+    }
+    .ReservationInfo_wrap{
+        grid-template-columns: auto;
+        gap: 50px
+    }
+    .reserInfo-ticket img{
+        width: 340px;
+    }
+    .reserInfo-ticket{
+        width: 340px;
+        height: 439px;
+        margin: 0 auto;
+    }
+    .reservationInfo-img{
+        width: 749px;
+    }
+    .reserInfo-ticket div{
+        width: 280px;
+        font-size: 15px;
+        padding: 3px 30px;
+    }
+    .reservationInfo-choice{
+        width: 739px;
+        padding: 30px 5px;
+    }
+    .reservationInfo-choice-wrap{
+        display: block;
+    }
+    .reservationInfo-choice-left{
+        display: flex;
+        width: 724px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .counter{
+        padding: 15px 0;
+    }
+    .counter-box{
+        width: 350px;
+        justify-content: space-between;
+        padding: 12px 15px;
+    }
+    .conter-bg{
+        width: 155px;
+        height: 43px;
+    }
+    .counter-span{
+        display: none;
+    }
+    .information-span{
+        font-size: 16px;
+    }
+    .information-wrap p{
+        font-size: 15px;
+    }
+    .information-wrap{
+        padding: 25px 20px;
+        width: 668px;
+    }
+    .information{
+        /* width: 753px; */
+    }
+    .information-resbtn{
+        margin: 0;
+        width: 725px
+    }
+    /* reservatonlist ---------------------------------------------------------------------- */
+    #ReservationList_main{
+        max-width: 768px;
+        padding: 50px 10px 20px;
+    }
+    .reservationList-img{
+        display: none;
+    }
+    .reservationlist-span{
+        font-size: 18px;
+    }
+    .MyReserArt-info .title{
+        font-size: 17px;
+    }
+    .tabs{
+        width: 100%;
+    }
+    .reservationlist{
+        width: 100%;
+    }
+}
+
+@media (max-width: 390px){
+    h2,h3{
+        font-size: 19px;
+    }
+    .main_slogan{
+        padding: 0 10px;
+        width: 95%;
+    }
+    .main_img{
+        margin-top: 15px;
+    }
+    .main_img img{
+        width: 100%;
+    }
+    .main-artwork{
+        padding: 80px 10px 100px;
+    }
+    .main-artwork-more{
+        top: 15%;
+        width: 41%;
+    }
+    .main-artwork-more img{
+        width: 23%;
+    }
+    .main-artwork_slogan{
+        margin-bottom: 69px;
+    }
+    .swiper-wrapper {
+        flex: 0 0 100% !important; /* 한 페이지에 1개의 슬라이드만 보이도록 설정 */
+    }
+    .swiper-slide, swiper-slide{
+        width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    .swiper-container {
+        width: 100% !important; /* 슬라이드 컨테이너의 너비를 100%로 설정 */
+    }
+    .swiper-wrapper{
+        /* transform: translate3d(-365px, 0px, 0px) !important; */
+    }
+    
+}

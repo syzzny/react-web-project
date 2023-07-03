@@ -85,6 +85,9 @@ export default function Index() {
                             <li><a href=""><span style={{ fontWeight: "bolder" }}>KOR</span></a></li>
                         </ul>
                     </div>
+                    <div className='mobile-menu'>
+                        <Link to="/reservation"><span>예약</span></Link>
+                    </div>
                     {/* <nav role="navigation">
                         <div id="menuToggle">
                             <input type="checkbox" />

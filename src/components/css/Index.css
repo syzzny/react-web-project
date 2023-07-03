@@ -107,7 +107,9 @@ p {
     display: inline-block;
     vertical-align: middle;
 }
-
+.mobile-menu{
+    display: none;
+}
 .checkart {
     background-color: #000;
     border-radius: 100px;

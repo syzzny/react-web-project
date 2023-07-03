@@ -59,7 +59,7 @@ export default function ProgramInfo() {
                         <div id='logo'>
                             <img src={`${process.env.PUBLIC_URL}/assets/img/logo2.png`} alt="" />
                         </div>
-
+                        
                     </Link>
                     <nav className='menu-container'>
                         <ul id='menu'>

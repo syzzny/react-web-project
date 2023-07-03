@@ -28,6 +28,10 @@ export default function NavReservation() {
                             <li><a href=""><span style={{ fontWeight: "bolder" }}>KOR</span></a></li>
                         </ul>
                     </div>
+                    <div className='mobile-menu-container'>
+                            <li><NavLink to='/reservation' className={({ isActive }) => (isActive ? "menulink on" : "menulink")}>개인예매</NavLink></li>
+                            <li><NavLink to='/reservationlist' className={({ isActive }) => (isActive ? "menulink on" : "menulink")}>예매내역</NavLink></li>
+                    </div>
                 </div>
             </header>
         </div>

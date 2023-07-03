@@ -10,6 +10,7 @@ import { format } from 'date-fns';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 import { Reserinfo } from './Modalbox';
+import NavReservation from './NavReservation';
 
 
 export default function ReservatonInfo() {
@@ -66,7 +67,7 @@ export default function ReservatonInfo() {
                 </div>
             </div>
 
-            <header className="res-header">
+            {/* <header className="res-header">
                 <div className='res-header_inner'>
                     <Link to={'/'}>
                         <a href="/">
@@ -88,7 +89,8 @@ export default function ReservatonInfo() {
                         </ul>
                     </div>
                 </div>
-            </header>
+            </header> */}
+            <NavReservation/>
 
             <main id='ReservationInfo_main'>
                 <div className='ReservationInfo_wrap'>

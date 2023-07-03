@@ -409,6 +409,9 @@
     }
 
     /* reservation -------------------------------------------------------------------- */
+    .mobile-menu-container{
+        display: none;
+    }
     .animated-title {
         font-size: 14px;
         height: 46px;
@@ -603,7 +606,7 @@
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 414px){
 
     h2,
     h3 {
@@ -617,6 +620,7 @@
     .sub-menu {
         display: none;
     }
+
 
     .header_inner {
         margin: 0;
@@ -771,6 +775,23 @@
  * into a crossmark.
  */
 
+    .mobile-menu{
+        display: block;
+        position: relative;
+        top: 30px;
+        width: 80px;
+        height: 30px;
+        left: 79%;
+        background-color: #000;
+        color: #fff;
+        line-height: 26px;
+        border-radius: 20px;
+    }
+    .mobile-menu a{
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+    }
     .main_slogan {
         padding: 0 10px;
         width: 95%;
@@ -914,14 +935,169 @@
         margin-bottom: 20px;
     }
     .artfilter{
-        width: 348px;
+        width: 370px;
+    }
+
+
+    /* artworkinfo ---------------------------------------------------------------------------------- */
+    #ArtworkInfo_main{
+        max-width: 414px;
+        padding: 100px 10px 20px;
     }
     .artlist-img{
         display: grid;
         grid-template-columns: auto;
-        
+        row-gap: 35px;
     }
     .artlist-wrap img{
-        width: 345px;
+        width: 370px;
+    }
+    .article-info{
+        font-size: 13px;
+        width: 370px;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+    .artworkinfo{
+        padding: 30px 0;
+    }
+    .artmainimg img{
+        width: 395px;
+    }
+    .infotext{
+        width: 395px;
+    }
+    .infotext-list li p{
+        width: 395px;
+    }
+    .infotext-list li{
+        grid-template-rows: 0.5fr 8fr;
+    }
+    .infotext-list img{
+        width: 395px;
+    }
+    .heart-button{
+        width: 395px;
+        margin-top: 10px;
+    }
+
+    /* programinfo ----------------------------------------------------------------------- */
+    .programinfo-wrap{
+        max-width: 414px;
+    }
+    .programinfo-title{
+        width: 395px;
+    }
+    .infoimg img{
+        width: 395px;
+    }
+    .program-btn{
+        width: 395px;
+    }
+
+    /* reservation ------------------------------------------------------------------------------- */
+    #Reservaton_main{
+        width: 382px;
+        padding: 10px 16px 20px;
+    }
+    .reservation-list .list{
+        grid-template-columns: none;
+        gap: 20px;
+    }
+    .restlist{
+        grid-template-columns: none;
+        gap: 20px;
+    }
+    .restlist-info{
+        width: 382px;
+    }
+    .restlist-info img{
+        width: 382px;
+    }
+    .restlist-span{
+        width: 382px;
+    }
+
+    /* reservationinfo ----------------------------------------------------------------------- */
+    #ReservationInfo_main{
+        max-width: 414px;
+        padding: 40px 10px 20px;
+    }
+    .reservationInfo-img{
+        width: 323px;
+    }
+    .reservationInfo-choice{
+        width: 384px;
+    }
+    .reservationInfo-choice-left{
+        display: grid;
+        width: 384px;
+        justify-items: center;
+        grid-template-rows: none;
+        justify-content: center;
+    }
+    .information-wrap{
+        padding: 25px 15px;
+        width: 325px;
+    }
+    .counter-box{
+        width: 317px;
+    }
+    .information-resbtn{
+        width: 296px;
+    }
+    .ReservationInfo_wrap{
+        justify-items: center;
+    }
+    .reserInfo-ticket img{
+        width: 323px;
+    }
+    .reserInfo-ticket{
+        width: 323px;
+        height: 427px;
+    }
+    .reserInfo-ticket div{
+        width: 263px;
+    }
+    .info_hr{
+        width: 325px;
+    }
+    .rdp{
+        width: 325px;
+    }
+    .rdp-table{
+        width: 325px !important;
+        max-width: none !important;
+    }
+    .res-header_inner{
+        margin:  0 auto;
+    }
+    .mobile-menu-container{
+        display: flex;
+        list-style: none;
+        position: relative;
+        top: 30px;
+        left: 65%;
+        gap: 16px;
+    }
+
+    /* reservationlist ------------------------------------------------------------------------- */
+    .MyReserArt{
+        display: block;
+        height: 100%;
+        padding: 15px 20px;
+    }
+    .MyReserArt-img img{
+        width: 280px;
+    }
+    .MyReserArt-info{
+        margin-top: 10px;
+        height: 100%;
+    }
+    .MyReserArt-info .date{
+        margin-bottom: 25px;
+    }
+    .reservation-date{
+        font-weight: 300;
     }
 }

@@ -85,11 +85,23 @@ export default function Index() {
                             <li><a href=""><span style={{ fontWeight: "bolder" }}>KOR</span></a></li>
                         </ul>
                     </div>
+                    {/* <nav role="navigation">
+                        <div id="menuToggle">
+                            <input type="checkbox" />
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <ul id="menu">
+                                <a href="#main-artwork">전시</a>
+                                <a href="#"><li>About</li></a>
+                                <a href="#"><li>Info</li></a>
+                                <a href="#"><li>Contact</li></a>
+                                <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+                            </ul>
+                        </div>
+                    </nav> */}
                 </div>
             </header>
-
-
-
 
             <main id='main' className='main-container'>
                 <div className='main-wrap'>
@@ -122,7 +134,10 @@ export default function Index() {
                                     loop = {true} : slide가 무한대로 반복 순환 */}
                                 <Swiper
                                     spaceBetween={10} slidesPerView={2} loop={true} pagination={{ clickable: true }}
-                                    navigation={{ prevEl: '.swiper-prev', nextEl: '.swiper-next' }}>
+                                    navigation={{ prevEl: '.swiper-prev', nextEl: '.swiper-next' }}
+                                    breakpoints={
+                                        { 390: { slidesPerView: 1 }, 768: { slidesPerView: 2 } }
+                                    }>
                                     <ul className='artwork-list'>
                                         {
                                             artlist.map((artwork) => (

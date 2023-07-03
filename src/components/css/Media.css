@@ -1,246 +1,310 @@
 @media (max-width: 768px) {
-    h2{
+    h2 {
         font-size: 22px;
     }
+
     .header {
         max-width: 768px;
     }
-    .menu-container{
+
+    .menu-container {
         width: 385px;
     }
-    #menu li a{
+
+    #menu li a {
         padding: 13px 20px;
     }
-    #logo img{
+
+    #logo img {
         width: 100px;
     }
-    .sub-menu{
+
+    .sub-menu {
         position: absolute;
         top: 16px;
         right: -2px;
     }
-    .main-wrap{
+
+    .main-wrap {
         height: 100%;
         position: unset;
         max-width: 768px;
     }
-    .main_slogan{
+
+    .main_slogan {
         /* top: calc(50% - 23rem); */
         margin-top: 130px;
         position: unset;
     }
-    .main_img{
+
+    .main_img {
         width: 100%;
         height: auto;
         position: unset;
         margin-top: 20px;
     }
-    .main_img img{
+
+    .main_img img {
         width: 768px;
         height: auto;
     }
-    .main-artwrok-wrap{
+
+    .main-artwrok-wrap {
         max-width: 768px;
         padding: 0 10px;
     }
-    .main-artwork-more{
+
+    .main-artwork-more {
         top: 90px;
         right: 10px;
         width: 176px;
     }
-    .main-artwork-more a{
+
+    .main-artwork-more a {
         font-size: 15px;
         font-weight: 400;
     }
-    .main-artwork-more img{
+
+    .main-artwork-more img {
         width: 60px;
     }
-    .main-artwork_slogan{
+
+    .main-artwork_slogan {
         margin-bottom: 100px;
     }
-    .swiper-slider img{
+
+    .swiper-slider img {
         width: 367px;
     }
-    .main-program{
+
+    .main-program {
         padding: 70px 0;
     }
-    .main-program_slogan{
+
+    .main-program_slogan {
         margin-bottom: 61px;
     }
-    .main-program-wrap{
+
+    .main-program-wrap {
         max-width: 768px;
         padding: 0 10px;
     }
-    .main-program-infor{
+
+    .main-program-infor {
         gap: 118px;
     }
-    .main-program-infor{
+
+    .main-program-infor {
         margin-top: 50px;
     }
-    .main-program-sub span:first-child{
+
+    .main-program-sub span:first-child {
         margin-bottom: 15px;
     }
-    .main-program-title{
+
+    .main-program-title {
         font-size: 17px;
     }
-    .main-program-img{
+
+    .main-program-img {
         width: 748px;
         margin-bottom: 70px;
     }
-    .main-place-wrap{
+
+    .main-place-wrap {
         max-width: 768px;
         padding: 0 10px;
     }
-    .main-place-contents{
+
+    .main-place-contents {
         gap: 10px;
     }
-    .main-contents-img{
+
+    .main-contents-img {
         width: 100%;
         height: 162px;
     }
-    .main-contents-img img{
+
+    .main-contents-img img {
         width: 100%;
     }
-    .main-contents-title{
+
+    .main-contents-title {
         margin-top: 13px;
     }
-    .museum{
+
+    .museum {
         font-size: 15px;
     }
-    .address{
+
+    .address {
         font-size: 15px;
         color: #000;
         font-weight: 300;
     }
-    .footer-wrap{
+
+    .footer-wrap {
         max-width: 768px;
         padding: 0 10px;
     }
-    #footer{
+
+    #footer {
         padding: 25px 0 105px;
     }
-    #footer-menu span{
+
+    #footer-menu span {
         font-size: 14px;
     }
-    .footer_menu-container{
+
+    .footer_menu-container {
         width: 290px;
     }
-    .footer-logo img{
+
+    .footer-logo img {
         width: 100px;
     }
-    .footer-address{
+
+    .footer-address {
         font-size: 14px;
     }
-    .footer-bottom{
+
+    .footer-bottom {
         padding: 30px 0;
     }
-    .footer-logo{
+
+    .footer-logo {
         top: 76px;
     }
-    .copyright{
+
+    .copyright {
         top: 154px;
         margin: 0;
         font-size: 14px;
     }
 
     /* artworkall-------------------------------------------------------------- */
-    #ArtworkAll_main{
+    #ArtworkAll_main {
         max-width: 768px;
         display: grid;
         padding: 150px 10px 20px
     }
-    .artfilter{
+
+    .artfilter {
         width: 728px;
     }
-    .artfilter-wrap{
+
+    .artfilter-wrap {
         /* display: flex;
         justify-content: space-between; */
     }
-    .borderline{
+
+    .borderline {
         display: none;
     }
-    .filter-name{
+
+    .filter-name {
         margin-bottom: 8px;
     }
-    .filter-name h3{
+
+    .filter-name h3 {
         font-size: 22px;
     }
-    .filter-top{
+
+    .filter-top {
         margin-bottom: 15px;
     }
-    .filter-top-list-place{
+
+    .filter-top-list-place {
         display: flex;
         gap: 16px;
         margin: 0;
         font-size: 15px;
     }
-    .artlist-wrap img{
+
+    .artlist-wrap img {
         width: 368px;
     }
-    .artist-img{
+
+    .artist-img {
         column-gap: 10px;
         row-gap: 30px;
     }
-    .article-info{
+
+    .article-info {
         margin-top: 5px;
         font-size: 14px;
     }
-    .title{
+
+    .title {
         margin: 0;
         text-align: left;
     }
-    .date{
+
+    .date {
         color: #000;
         font-weight: 300;
     }
-    .art-date-list{
+
+    .art-date-list {
         font-size: 13px;
     }
-    
+
     /* artworkinfo---------------------------------------------------------- */
-    #ArtworkInfo_main{
+    #ArtworkInfo_main {
         max-width: 768px;
         padding: 110px 10px 20px
     }
+
     .artmainimg {
         height: auto;
     }
-    .artmainimg img{
+
+    .artmainimg img {
         width: 746px;
     }
-    .artworkinfo{
+
+    .artworkinfo {
         padding: 35px 0;
     }
-    .artworkinfo-wrap{
+
+    .artworkinfo-wrap {
         max-width: 746px;
         display: grid;
     }
-    .infotext-list li{
+
+    .infotext-list li {
         display: grid;
         grid-template-rows: 0.5fr 2.5fr;
-        grid-template-columns:auto
+        grid-template-columns: auto
     }
-    .infotext-list{
+
+    .infotext-list {
         margin-top: 0;
     }
-    .infotext-list span{
+
+    .infotext-list span {
         font-size: 18px;
     }
-    .infotext-list li p{
+
+    .infotext-list li p {
         width: 746px;
         font-size: 16px;
         font-weight: 300;
     }
-    .infotext-list li{
+
+    .infotext-list li {
         margin-bottom: 50px;
     }
-    .infotext-list img{
+
+    .infotext-list img {
         width: 746px;
     }
-    .infotext{
+
+    .infotext {
         width: 746px;
     }
-    .heart-button{
+
+    .heart-button {
         margin: 0;
         width: 746px;
         height: 52px;
@@ -248,277 +312,616 @@
         display: block;
         text-align: center;
     }
-    .heart-button img{
+
+    .heart-button img {
         display: none;
     }
-    .infotext-list:last-child{
+
+    .infotext-list:last-child {
         margin-bottom: 0;
     }
-    .infotext-list li:last-child{
+
+    .infotext-list li:last-child {
         margin-bottom: 0;
     }
 
     /* heartartwork ------------------------------------------------------------- */
-    #HeartArtwork_main{
+    #HeartArtwork_main {
         max-width: 768px;
         padding: 110px 10px 20px
     }
-    .heart-img{
+
+    .heart-img {
         height: auto;
     }
-    .heartartlist-img img{
+
+    .heartartlist-img img {
         width: 368px;
     }
-    .heartarticle-info{
+
+    .heartarticle-info {
         width: 368px;
         gap: 5px;
     }
-    .heartarticle-info .title{
+
+    .heartarticle-info .title {
         font-size: 14px;
         margin: 0;
     }
-    .heartarticle-info .date{
+
+    .heartarticle-info .date {
         font-size: 12px;
         margin: 0;
         text-align: left;
     }
-    .heartart-btn{
+
+    .heartart-btn {
         width: 55px;
         height: 25px;
         font-size: 12px;
     }
 
     /* programinfo ----------------------------------------------------------------------- */
-    .programinfo-wrap{
+    .programinfo-wrap {
         max-width: 768px;
         padding: 110px 10px 70px;
         grid-template-columns: auto;
         gap: 20px;
     }
-    .infoimg img{
+
+    .infoimg img {
         width: 747px;
     }
-    .programinfo-title{
+
+    .programinfo-title {
         width: 630px;
     }
-    .programinfo-title h3{
+
+    .programinfo-title h3 {
         font-size: 18px;
     }
-    .programinfo-text{
+
+    .programinfo-text {
         padding: 10px 0;
     }
-    .programinfo-text-span{
+
+    .programinfo-text-span {
         font-size: 17px;
     }
-    .programinfo-text p{
+
+    .programinfo-text p {
         font-size: 16px;
     }
-    .programinfo-list{
+
+    .programinfo-list {
         font-size: 16px;
     }
-    .program-btn{
+
+    .program-btn {
         width: 746px;
         padding: 0;
         text-align: center;
         display: block;
     }
-    .program-btn img{
+
+    .program-btn img {
         display: none;
     }
 
     /* reservation -------------------------------------------------------------------- */
-    .animated-title{
+    .animated-title {
         font-size: 14px;
         height: 46px;
     }
-    .animated-title .track{
+
+    .animated-title .track {
         line-height: 46px;
     }
-    #Reservaton_main{
+
+    #Reservaton_main {
         max-width: 768px;
         padding: 50px 10px 20px;
     }
-    .reservation-list-wrap img{
+
+    .reservation-list-wrap img {
         width: 348px;
     }
-    .reservation-list-title, .reservatonAll{
+
+    .reservation-list-title,
+    .reservatonAll {
         width: 348px;
         font-size: 15px;
     }
-    .reservation-list-btn-wrap{
+
+    .reservation-list-btn-wrap {
         width: 348px;
         font-size: 15px;
     }
-    .reservation-list-info, .reservation-list-price{
+
+    .reservation-list-info,
+    .reservation-list-price {
         font-size: 15px;
     }
-    .reservation-list .list{
+
+    .reservation-list .list {
         gap: 12px;
     }
-    .reservation-list-btn{
+
+    .reservation-list-btn {
         width: 100px;
         height: 35px;
         font-size: 14px;
         font-weight: 300;
         margin-top: 20px;
     }
-    .rest h3{
+
+    .rest h3 {
         font-size: 22px;
     }
-    .restlist{
+
+    .restlist {
         gap: 10px;
     }
-    .restlist-info{
+
+    .restlist-info {
         width: 241px;
         height: auto;
     }
-    .restlist-info img{
+
+    .restlist-info img {
         width: 241px;
     }
-    .restlist-span{
+
+    .restlist-span {
         width: 241px;
         padding: 8px 0;
     }
-    .restlist-span span{
+
+    .restlist-span span {
         font-size: 15px;
         line-height: 30px;
     }
-    .restlist-btn{
+
+    .restlist-btn {
         width: 100px;
         height: 30px;
         font-size: 12px;
     }
+
     /* reservationinfo -------------------------------------------------- */
-    #ReservationInfo_main{
+    #ReservationInfo_main {
         max-width: 768px;
         padding: 50px 10px 20px;
     }
-    .ReservationInfo_wrap{
+
+    .ReservationInfo_wrap {
         grid-template-columns: auto;
         gap: 50px
     }
-    .reserInfo-ticket img{
+
+    .reserInfo-ticket img {
         width: 340px;
     }
-    .reserInfo-ticket{
+
+    .reserInfo-ticket {
         width: 340px;
         height: 439px;
         margin: 0 auto;
     }
-    .reservationInfo-img{
+
+    .reservationInfo-img {
         width: 749px;
     }
-    .reserInfo-ticket div{
+
+    .reserInfo-ticket div {
         width: 280px;
         font-size: 15px;
         padding: 3px 30px;
     }
-    .reservationInfo-choice{
+
+    .reservationInfo-choice {
         width: 739px;
         padding: 30px 5px;
     }
-    .reservationInfo-choice-wrap{
+
+    .reservationInfo-choice-wrap {
         display: block;
     }
-    .reservationInfo-choice-left{
+
+    .reservationInfo-choice-left {
         display: flex;
         width: 724px;
         justify-content: space-between;
         align-items: flex-end;
     }
-    .counter{
+
+    .counter {
         padding: 15px 0;
     }
-    .counter-box{
+
+    .counter-box {
         width: 350px;
         justify-content: space-between;
         padding: 12px 15px;
     }
-    .conter-bg{
+
+    .conter-bg {
         width: 155px;
         height: 43px;
     }
-    .counter-span{
+
+    .counter-span {
         display: none;
     }
-    .information-span{
+
+    .information-span {
         font-size: 16px;
     }
-    .information-wrap p{
+
+    .information-wrap p {
         font-size: 15px;
     }
-    .information-wrap{
+
+    .information-wrap {
         padding: 25px 20px;
         width: 668px;
     }
-    .information{
+
+    .information {
         /* width: 753px; */
     }
-    .information-resbtn{
+
+    .information-resbtn {
         margin: 0;
         width: 725px
     }
+
     /* reservatonlist ---------------------------------------------------------------------- */
-    #ReservationList_main{
+    #ReservationList_main {
         max-width: 768px;
         padding: 50px 10px 20px;
     }
-    .reservationList-img{
+
+    .reservationList-img {
         display: none;
     }
-    .reservationlist-span{
+
+    .reservationlist-span {
         font-size: 18px;
     }
-    .MyReserArt-info .title{
+
+    .MyReserArt-info .title {
         font-size: 17px;
     }
-    .tabs{
+
+    .tabs {
         width: 100%;
     }
-    .reservationlist{
+
+    .reservationlist {
         width: 100%;
     }
 }
 
-@media (max-width: 390px){
-    h2,h3{
+@media (max-width: 390px) {
+
+    h2,
+    h3 {
         font-size: 19px;
     }
-    .main_slogan{
+
+    .menu-container {
+        display: none;
+    }
+
+    .sub-menu {
+        display: none;
+    }
+
+    .header_inner {
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    #logo {
+        width: 80px;
+        top: 26%;
+        left: 3%;
+        margin: 0;
+    }
+
+    #logo img {
+        width: 100%;
+    }
+
+    #menuToggle {
+        display: block;
+        position: relative;
+        top: 50px;
+        left: 337px;
+        top: 33px;
+        z-index: 1;
+
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle a {
+        text-decoration: none;
+        color: #ffffff;
+
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle a:hover {
+        color: tomato;
+    }
+
+
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+
+        cursor: pointer;
+
+        opacity: 0;
+        /* hide this */
+        z-index: 2;
+        /* and place it over the hamburger */
+
+        -webkit-touch-callout: none;
+    }
+
+    /*
+ * Just a quick hamburger
+ */
+    #menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+
+        background: #777;
+        border-radius: 3px;
+
+        z-index: 1;
+
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+    #menuToggle input:checked~span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #fff;
+    }
+
+    /*
+ * But let's hide the middle one.
+ */
+    #menuToggle input:checked~span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+ * Ohyeah and the last one should go the other direction
+ */
+    #menuToggle input:checked~span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+    #menu {
+        position: absolute;
+        width: 300px;
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        padding-top: 125px;
+        left: -307px;
+        display: grid;
+        background: #7a7a7a;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+
+    /*
+ * And let's slide it in from the left
+ */
+    #menuToggle input:checked~ul {
+        transform: none;
+    }
+
+    /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+
+    .main_slogan {
         padding: 0 10px;
         width: 95%;
     }
-    .main_img{
+
+    .main_img {
         margin-top: 15px;
     }
-    .main_img img{
+
+    .main_img img {
         width: 100%;
     }
-    .main-artwork{
+
+    .main-artwork {
         padding: 80px 10px 100px;
     }
-    .main-artwork-more{
+
+    .main-artwork-more {
         top: 15%;
         width: 41%;
     }
-    .main-artwork-more img{
+
+    .main-artwork-more img {
         width: 23%;
     }
-    .main-artwork_slogan{
+
+    .main-artwork_slogan {
         margin-bottom: 69px;
     }
-    .swiper-wrapper {
-        flex: 0 0 100% !important; /* 한 페이지에 1개의 슬라이드만 보이도록 설정 */
+
+    .main-program {
+        padding: 50px 0;
     }
-    .swiper-slide, swiper-slide{
-        width: 100% !important;
-        flex: 0 0 100% !important;
+
+    .main-program_slogan {
+        margin-bottom: 30px;
     }
-    .swiper-container {
-        width: 100% !important; /* 슬라이드 컨테이너의 너비를 100%로 설정 */
+
+    .main-program-img img {
+        width: 380px;
     }
-    .swiper-wrapper{
-        /* transform: translate3d(-365px, 0px, 0px) !important; */
+
+    .main-program-img {
+        width: 380px;
+        margin-bottom: 45px;
+        height: auto;
     }
-    
+
+    .main-program-sub {
+        font-size: 15px;
+    }
+
+    .main-program-wrap {
+        max-width: 390px;
+        padding: 0 10px;
+    }
+
+    .main-program-infor {
+        gap: 10px;
+    }
+
+    .main-program-infor {
+        margin-top: 14px;
+        align-items: flex-start;
+    }
+
+    .main-program-sub span:first-child {
+        margin-bottom: 15px;
+    }
+
+    .main-program-title {
+        font-size: 14px;
+    }
+
+    .main-program-sub span {
+        font-size: 14px;
+    }
+
+    .main-program-button img {
+        width: 25px;
+    }
+
+    .main-place-contents {
+        display: grid;
+        gap: 20px;
+    }
+
+    .main-contents-title {
+        margin-top: 9px;
+    }
+
+    .main-place {
+        padding: 110px 0;
+    }
+
+    .main-place_slogan {
+        margin-bottom: 50px;
+    }
+
+    #footer-menu span {
+        font-size: 13px;
+    }
+
+    .footer-address {
+        font-size: 12px;
+        left: 36%;
+        top: 59%;
+    }
+
+    .footer-logo {
+        width: 80px;
+        left: 4%;
+        top: 74%;
+    }
+
+    .footer-logo img {
+        width: 100%;
+    }
+
+    .copyright {
+        font-size: 13px;
+    }
+
+    /* artworkall ----------------------------------------------------------------- */
+    #ArtworkAll_main{
+        min-width: 390px;
+        max-width: 390px;
+        padding: 115px 10px 20px;
+    }
+    .filter-name h3{
+        font-size: 21px;
+    }
+    .filter-top-list-place{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        width: 350px;
+        grid-row-gap: 0px;
+    }
+    .filter-top{
+        margin-bottom: 20px;
+    }
+    .artfilter{
+        width: 348px;
+    }
+    .artlist-img{
+        display: grid;
+        grid-template-columns: auto;
+        
+    }
+    .artlist-wrap img{
+        width: 345px;
+    }
 }
